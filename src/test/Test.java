@@ -27,7 +27,7 @@ public class Test {
         dnsQuery.printAnswer();
     }
     private static void testHttp() throws IOException {
-        URLParser urlParser = new URLParser("http://www.baidu.com/");
+        URLParser urlParser = new URLParser("http://www.berkeley.edu/");
         HttpClient httpClient = new HttpClient(urlParser.getUrl());
     }
 }

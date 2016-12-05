@@ -16,7 +16,10 @@ public class Response {
     private String contentType;
     private String server;
     private List<String> cookies = new ArrayList<>();
-    private List<String> entity = new ArrayList<>();
+    private String entity;
+    private String location;
+    private String transferCoding;
+    private String contentEncoding;
 
     public Response() {
 
@@ -94,15 +97,39 @@ public class Response {
         this.cookies = cookies;
     }
 
-    public List<String> getEntity() {
+    public String getEntity() {
         return entity;
+    }
+
+    public void setEntity(String entity) {
+        this.entity = entity;
     }
 
     public void addCookie(String cookie) {
         cookies.add(cookie);
     }
 
-    public void addEntity(String line) {
-        entity.add(line);
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getTransferCoding() {
+        return transferCoding;
+    }
+
+    public void setTransferCoding(String transferCoding) {
+        this.transferCoding = transferCoding;
+    }
+
+    public String getContentEncoding() {
+        return contentEncoding;
+    }
+
+    public void setContentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
     }
 }
