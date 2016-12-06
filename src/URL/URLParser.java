@@ -73,7 +73,7 @@ public class URLParser {
     }
     private HashMap<String, List<String>> getParameter() {
         HashMap<String, List<String>> list = new HashMap<>();
-        if (rawUrl.charAt(0) == '?') {
+        if (rawUrl.length() > 0 && rawUrl.charAt(0) == '?') {
             rawUrl = rawUrl.substring(1);
             Pattern pattern = Pattern.compile("(((\\w*%)*(\\w*\\?)*(\\w*:)*(\\w*\\+)*(\\w*\\.)*(\\w*&)*(\\w*-)*(\\w*=)*(\\w*%)*(\\w*\\?)*(\\w*:)*(\\w*\\+)*(\\w*\\.)*(\\w*&)*(\\w*-)*(\\w*=)*)*(\\w*)*)");
             Matcher matcher = pattern.matcher(rawUrl);
@@ -92,7 +92,7 @@ public class URLParser {
         return list;
     }
     private String getFragment() {
-        if (rawUrl.charAt(0) == '#') {
+        if (rawUrl.length() > 0 && rawUrl.charAt(0) == '#') {
             rawUrl = rawUrl.substring(1);
             return rawUrl;
         }

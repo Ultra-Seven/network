@@ -7,7 +7,6 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
 import java.text.ParseException;
-import java.util.Arrays;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipInputStream;
 
@@ -25,9 +24,14 @@ public class HttpClient {
     public HttpClient(URL url) throws IOException {
         this.url = url;
         socket = new Socket();
-        sendRequestGet();
+        sendRequestGet("");
     }
-    public void sendRequestGet() throws IOException {
+    public HttpClient(URL url, String cookies) throws IOException {
+        this.url = url;
+        socket = new Socket();
+        sendRequestGet(cookies);
+    }
+    public void sendRequestGet(String cookies) throws IOException {
         String path = url.getPath();
         String host = url.getHost();
         int port = url.getPort();
@@ -38,14 +42,7 @@ public class HttpClient {
         //request line
         bufferedWriter.write("GET " + path + " HTTP/1.1\r\n");
         //header line
-        bufferedWriter.write("Host: " + host + "\r\n");
-        bufferedWriter.write("Connection: keep-alive\r\n");
-        bufferedWriter.write("Upgrade-Insecure-Requests: 1\r\n");
-        bufferedWriter.write(Browser.getBrowserType(Browser.CHROME));
-        bufferedWriter.write("Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\r\n");
-        bufferedWriter.write("Accept-Encoding: gzip, deflate, sdch, br\r\n");
-        bufferedWriter.write("Accept-Language: zh-CN,zh;q=0.8\r\n");
-
+        bufferedWriter.write(getRequestString(cookies));
 
         bufferedWriter.write("\r\n");
         bufferedWriter.flush();
@@ -90,9 +87,7 @@ public class HttpClient {
             return ;
         }
 
-        OutputStream outputStream = new ByteArrayOutputStream();;
-
-
+        OutputStream outputStream = new ByteArrayOutputStream();
         int index;
         if("chunked".equals(response.getTransferCoding())) {
             index = length = 0;
@@ -116,6 +111,9 @@ public class HttpClient {
 
         String entity = getResponseBodyAsString(response);
         System.out.println(entity);
+
+        handleResponse(response);
+
     }
     //read the entity of http response
     private int readEntity(InputStream inputStream, OutputStream outputStream, int length) throws IOException {
@@ -155,6 +153,7 @@ public class HttpClient {
                     break;
                 case "Set-Cookie":
                     response.addCookie(lines[1]);
+                    handleCookie(lines[1]);
                     break;
                 case "Location":
                     response.setLocation(lines[1]);
@@ -195,19 +194,20 @@ public class HttpClient {
 
     }
     //handle response
-    private void handleResponse(BufferedReader bufferedReader, Response response) throws IOException {
-        if (response.getStatusCode() == 302) {
+    private void handleResponse(Response response) throws IOException {
+        if (response.getStatusCode() == 302 || response.getStatusCode() == 301) {
+            String cookies = "";
+            for (int i = 0; i < response.getCookies().size(); i++) {
+                cookies = cookies + response.getCookies().get(i) + "\r\n";
+            }
             if (response.getLocation() != null) {
                 String location = response.getLocation();
                 URLParser urlParser = new URLParser(location);
-                new HttpClient(urlParser.getUrl());
+                new HttpClient(urlParser.getUrl(), cookies);
             }
         }
-        else if (response.getStatusCode() == 301) {
-
-        }
     }
-    public byte[] getResponseBody(Response response) throws IOException {
+    private byte[] getResponseBody(Response response) throws IOException {
 
         String encoding = response.getContentEncoding();
         if(encoding == null) {
@@ -233,11 +233,11 @@ public class HttpClient {
         return outputStream.toByteArray();
     }
 
-    private String getResponseBodyAsString(Response response) throws IOException, FileNotFoundException {
+    private String getResponseBodyAsString(Response response) throws IOException {
         return new String(getResponseBody(response));
     }
 
-    public InputStream getResponseBodyAsStream(Response response) throws FileNotFoundException, IOException {
+    public InputStream getResponseBodyAsStream(Response response) throws IOException {
         String encoding = response.getContentEncoding();
         InputStream in = new ByteArrayInputStream(readByte);
 
@@ -264,5 +264,17 @@ public class HttpClient {
         else {
             return null;
         }
+    }
+    private String getRequestString(String cookies) {
+        String request = "";
+        request = request + "Host: " +  url.getHost() + "\r\n";
+        request = request + "Connection: keep-alive\r\n";
+        request = request + "Upgrade-Insecure-Requests: 1\r\n";
+        request = request + Browser.getBrowserType(Browser.CHROME);
+        request = request + "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\r\n";
+        request = request + "Accept-Encoding: gzip, deflate, sdch, br\r\n";
+        request = request + "Accept-Language: zh-CN,zh;q=0.8\r\n";
+        request = request + cookies;
+        return request;
     }
 }
