@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f431008-821e-4911-95eb-56bec68095d4" name="Default" comment="TLS init&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/URL/TLS/Encryption/PseudoRandom.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/URL/TLS/HandShake.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/URL/TLS/Record.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/URL/TLS/TLSInputStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/URL/TLS/TLSOutputStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/URL/TLS/TLSSocket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/DNS/DNSQuery.class" afterPath="$PROJECT_DIR$/out/production/network/DNS/DNSQuery.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/Response.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/Response.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/URL.class" afterPath="$PROJECT_DIR$/out/production/network/URL/URL.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/URLParser.class" afterPath="$PROJECT_DIR$/out/production/network/URL/URLParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/test/Test.class" afterPath="$PROJECT_DIR$/out/production/network/test/Test.class" />
+    <list default="true" id="9f431008-821e-4911-95eb-56bec68095d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -47,8 +36,8 @@
       <file leaf-file-name="HandShake.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/URL/TLS/HandShake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            <state relative-caret-position="151">
+              <caret line="33" column="56" lean-forward="true" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -746,7 +735,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1480606736268</updated>
-      <workItem from="1480606739585" duration="92763000" />
+      <workItem from="1480606739585" duration="92915000" />
     </task>
     <task id="LOCAL-00001" summary="init commit&#10;">
       <created>1480862313022</created>
@@ -776,20 +765,27 @@
       <option name="project" value="LOCAL" />
       <updated>1481211601717</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="TLS init&#10;">
+      <created>1481215154989</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1481215154989</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92763000" />
+    <option name="totallyTimeSpent" value="92915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30972517" sideWeight="0.4875" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30972517" sideWeight="0.4875" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1152,8 +1148,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/URL/TLS/HandShake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        <state relative-caret-position="151">
+          <caret line="33" column="56" lean-forward="true" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
