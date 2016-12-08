@@ -1,5 +1,7 @@
 package HTTP;
 
+import HTTP.Download.DownloadFile;
+import HTTP.Download.MultiThreadsDownload;
 import URL.URL;
 
 import java.io.*;
@@ -7,6 +9,7 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
 import java.text.ParseException;
+import java.util.Arrays;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipInputStream;
 
@@ -21,17 +24,26 @@ public class HttpClient {
     private byte[] readByte = new byte[MAX_LINE_LENGTH];
     private Socket socket;
     private URL url;
+    private Response response;
+    private boolean multiThread = true;
     public HttpClient(URL url) throws IOException {
+        this.multiThread = false;
         this.url = url;
         socket = new Socket();
         sendRequestGet("");
     }
-    public HttpClient(URL url, String cookies) throws IOException {
-        this.url = url;
-        socket = new Socket();
-        sendRequestGet(cookies);
+    public HttpClient(URL url, String addString, boolean multiThread) throws IOException {
+        this.multiThread = multiThread;
+        if (addString != null) {
+            this.url = url;
+            socket = new Socket();
+            sendRequestGet(addString);
+        }
+        else {
+            System.out.println("Wrong added string");
+        }
     }
-    public void sendRequestGet(String cookies) throws IOException {
+    private void sendRequestGet(String addString) throws IOException {
         String path = url.getPath();
         String host = url.getHost();
         int port = url.getPort();
@@ -39,15 +51,18 @@ public class HttpClient {
         socket.connect(socketAddress);
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
         BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+        String request = "";
         //request line
-        bufferedWriter.write("GET " + path + " HTTP/1.1\r\n");
+        request = request + "GET " + path + " HTTP/1.1\r\n";
         //header line
-        bufferedWriter.write(getRequestString(cookies));
+        request = request + getRequestString(addString);
 
-        bufferedWriter.write("\r\n");
+        request = request + "\r\n";
+        System.out.println(request);
+        bufferedWriter.write(request);
         bufferedWriter.flush();
 
-        Response response = new Response();
+        response = new Response();
         parseResponse(socket.getInputStream(), response);
 
 
@@ -81,48 +96,57 @@ public class HttpClient {
             else
                 break;
         }
-
-        int length = response.getContentLength();
+        int threshold = 1000;//10 * (1 << 20);
+        long length = response.getContentLength();
         if(length == 0) { // we're done here
-            return ;
+            System.out.println("The content length is zero!");
         }
-
-        OutputStream outputStream = new ByteArrayOutputStream();
-        int index;
-        if("chunked".equals(response.getTransferCoding())) {
-            index = length = 0;
-            int hex;
-            String strHex;
-
-            do {
-                strHex = readLine(inputStream).trim();
-                hex = Integer.parseInt(strHex, 16);
-                length += readEntity(inputStream, outputStream, hex);
-                if(hex > 0) {
-                    readLine(inputStream); // there's a blank line before the content
-                }
-
-            } while(hex > 0 && index++ < MAX_CHUNKS);
+        else if (length > threshold) {
+            String path = url.getPath();
+            String fileName = url.getHost() + "_" + path.substring(path.lastIndexOf("/") + 1) + ".temp";
+            int split = (int) (length / threshold) + 1;//(int) (length / MAX_LINE_LENGTH);
+            DownloadFile downloadFile = new DownloadFile(url.getUrl(), fileName, split, length);
+            MultiThreadsDownload down = new MultiThreadsDownload(downloadFile, response);
+            new Thread(down).start();
+            System.out.println("The content length is too large. Multiple threads are running!");
         }
         else {
-            readEntity(inputStream, outputStream, length);
-            readByte = ((ByteArrayOutputStream)outputStream).toByteArray();
+            OutputStream outputStream = new ByteArrayOutputStream();
+            long index;
+            if ("chunked".equals(response.getTransferCoding())) {
+                index = length = 0;
+                int hex;
+                String strHex;
+                do {
+                    strHex = readLine(inputStream).trim();
+                    hex = Integer.parseInt(strHex, 16);
+                    length += readEntity(inputStream, outputStream, hex);
+                    if (hex > 0) {
+                        readLine(inputStream); // there's a blank line before the content
+                    }
+
+                } while (hex > 0 && index++ < MAX_CHUNKS);
+            } else {
+                readEntity(inputStream, outputStream, length);
+                readByte = ((ByteArrayOutputStream) outputStream).toByteArray();
+            }
+            byte[] bytes = getResponseBody(response);
+            response.setBytes(bytes);
+            String entity = getResponseBodyAsString(response);
+            response.setEntity(entity);
+            System.out.println(response.getRange());
+            System.out.println(Arrays.toString(bytes));
+            handleResponse(response);
         }
-
-        String entity = getResponseBodyAsString(response);
-        System.out.println(entity);
-
-        handleResponse(response);
-
     }
     //read the entity of http response
-    private int readEntity(InputStream inputStream, OutputStream outputStream, int length) throws IOException {
-        int size = BUFFER_SIZE;
+    private int readEntity(InputStream inputStream, OutputStream outputStream, long length) throws IOException {
+        long size = BUFFER_SIZE;
         byte[] buf = new byte[BUFFER_SIZE];
 
         int index = 0;
         int readLength;
-        while(index < length && (readLength = inputStream.read(buf, 0, size)) > 0) {
+        while(index < length && (readLength = inputStream.read(buf, 0, (int) size)) > 0) {
             //write input stream data into buffer
             outputStream.write(buf, 0, readLength);
             //set size
@@ -143,7 +167,7 @@ public class HttpClient {
                     response.setDate(lines[1]);
                     break;
                 case "Content-Length":
-                    response.setContentLength(Integer.parseInt(lines[1]));
+                    response.setContentLength(Long.parseLong(lines[1]));
                     break;
                 case "Content-Type":
                     response.setContentType(lines[1]);
@@ -172,6 +196,9 @@ public class HttpClient {
                 case "Content-Encoding":
                     response.setContentEncoding(lines[1]);
                     break;
+                case "Content-Range":
+                    response.setRange(lines[1]);
+                    break;
                 case "Keep-Alive":
                     break;
                 case "":
@@ -198,32 +225,31 @@ public class HttpClient {
         if (response.getStatusCode() == 302 || response.getStatusCode() == 301) {
             String cookies = "";
             for (int i = 0; i < response.getCookies().size(); i++) {
-                cookies = cookies + response.getCookies().get(i) + "\r\n";
+                cookies = cookies + "Set-Cookie: " + response.getCookies().get(i) + "\r\n";
             }
             if (response.getLocation() != null) {
                 String location = response.getLocation();
                 URLParser urlParser = new URLParser(location);
-                new HttpClient(urlParser.getUrl(), cookies);
+                new HttpClient(urlParser.getUrl(), cookies, multiThread);
             }
         }
     }
-    private byte[] getResponseBody(Response response) throws IOException {
-
+    private synchronized byte[] getResponseBody(Response response) throws IOException {
         String encoding = response.getContentEncoding();
         if(encoding == null) {
             return null;
         }
-
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         InputStream in = new ByteArrayInputStream(readByte);;
 
         //if the content is compressed by giz
-        if("gzip".equals(encoding)) {
+        if("gzip".equals(encoding) && !multiThread) {
             in = new GZIPInputStream(in);
         } //zip compressed
-        else if("deflate".equals(encoding)) {
+        else if("deflate".equals(encoding) && !multiThread) {
             in = new ZipInputStream(in);
         }
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         int size;
         byte[] buf = new byte[1024];
         while((size = in.read(buf)) > 0) {
@@ -265,7 +291,7 @@ public class HttpClient {
             return null;
         }
     }
-    private String getRequestString(String cookies) {
+    private String getRequestString(String addString) {
         String request = "";
         request = request + "Host: " +  url.getHost() + "\r\n";
         request = request + "Connection: keep-alive\r\n";
@@ -274,7 +300,15 @@ public class HttpClient {
         request = request + "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\r\n";
         request = request + "Accept-Encoding: gzip, deflate, sdch, br\r\n";
         request = request + "Accept-Language: zh-CN,zh;q=0.8\r\n";
-        request = request + cookies;
+        request = request + addString;
         return request;
+    }
+
+    public Response getResponse() {
+        return response;
+    }
+
+    public byte[] getReadByte() {
+        return readByte;
     }
 }

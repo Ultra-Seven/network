@@ -7,12 +7,15 @@ public class DownloadFile {
     private String url;
     private String fileName;
     private int split;
-    private final static String PATH = "file";
+    private long fileSize;
+    public final static String PATH = "file";
     private final static int SPLIT_NUM = 5;
-    public DownloadFile(String url, String fileName, int split) {
+
+    public DownloadFile(String url, String fileName, int split, long fileSize) {
         this.url = url;
         this.fileName = fileName;
         this.split = split;
+        this.fileSize = fileSize;
     }
 
     public String getUrl() {
@@ -37,5 +40,13 @@ public class DownloadFile {
 
     public void setSplit(int split) {
         this.split = split;
+    }
+
+    public long getFileSize() {
+        return fileSize;
+    }
+
+    public void setFileSize(long fileSize) {
+        this.fileSize = fileSize;
     }
 }

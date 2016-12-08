@@ -12,7 +12,7 @@ public class Response {
     private String expression;
     private String date;
     private String connection;
-    private int contentLength;
+    private long contentLength;
     private String contentType;
     private String server;
     private List<String> cookies = new ArrayList<>();
@@ -20,7 +20,8 @@ public class Response {
     private String location;
     private String transferCoding;
     private String contentEncoding;
-
+    private String range;
+    private byte[] bytes;
     public Response() {
 
     }
@@ -65,11 +66,11 @@ public class Response {
         this.connection = connection;
     }
 
-    public int getContentLength() {
+    public long getContentLength() {
         return contentLength;
     }
 
-    public void setContentLength(int contentLength) {
+    public void setContentLength(long contentLength) {
         this.contentLength = contentLength;
     }
 
@@ -131,5 +132,21 @@ public class Response {
 
     public void setContentEncoding(String contentEncoding) {
         this.contentEncoding = contentEncoding;
+    }
+
+    public byte[] getBytes() {
+        return bytes;
+    }
+
+    public void setBytes(byte[] bytes) {
+        this.bytes = bytes;
+    }
+
+    public String getRange() {
+        return range;
+    }
+
+    public void setRange(String range) {
+        this.range = range;
     }
 }

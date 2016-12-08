@@ -18,28 +18,69 @@ public class DNSQuery {
         this.domain = domain;
         this.dnsServer = dnsServer;
         DatagramSocket datagramSocket = new DatagramSocket(8080);
+        DatagramSocket datagramSocket2 = new DatagramSocket(8081);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(BUF_SIZE);
+        ByteArrayOutputStream byteArrayOutputStream6 = new ByteArrayOutputStream(BUF_SIZE);
         DataOutputStream output = new DataOutputStream(byteArrayOutputStream);
+        DataOutputStream output6 = new DataOutputStream(byteArrayOutputStream6);
         //make DNS Message
-        sendMessage(output, domain);
+        sendIpv4Message(output, domain);
+        sendIpv6Message(output6, domain);
         InetAddress dns = InetAddress.getByName(dnsServer);
         DatagramPacket sendSocket = new DatagramPacket(byteArrayOutputStream.toByteArray(), byteArrayOutputStream.size(), dns, PORT);
+        DatagramPacket sendSocket6 = new DatagramPacket(byteArrayOutputStream6.toByteArray(), byteArrayOutputStream6.size(), dns, PORT);
 
         //send DNS query
         datagramSocket.send(sendSocket);
+        datagramSocket2.send(sendSocket6);
         //receive answer
         byte[] buf = new byte[BUF_SIZE];
+        byte[] buf2 = new byte[BUF_SIZE];
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(buf);
         DataInputStream inputStream = new DataInputStream(byteArrayInputStream);
+        ByteArrayInputStream byteArrayInputStream2 = new ByteArrayInputStream(buf2);
+        DataInputStream inputStream2 = new DataInputStream(byteArrayInputStream2);
         DatagramPacket answer = new DatagramPacket(buf, BUF_SIZE);
+        DatagramPacket answer2 = new DatagramPacket(buf2, BUF_SIZE);
         datagramSocket.receive(answer);
+        datagramSocket2.receive(answer2);
 
         //parse answer message
         receiveMessage(inputStream, ipList);
+        receiveMessage(inputStream2, ipList);
         //close socket
         datagramSocket.close();
+        datagramSocket2.close();
     }
-    private void sendMessage(DataOutputStream dataOutputStream, String domain) throws IOException {
+
+    private void sendIpv6Message(DataOutputStream dataOutputStream, String domain) throws IOException {
+        //identification
+        dataOutputStream.writeShort(100);
+        //flags
+        dataOutputStream.writeShort(0x100);
+        //the number of questions
+        dataOutputStream.writeShort(1);
+        //the number of answers
+        dataOutputStream.writeShort(0);
+        //the number of authority
+        dataOutputStream.writeShort(0);
+        //the number of additional RRs
+        dataOutputStream.writeShort(0);
+        String[] parts = domain.split("\\.");
+        for (String part : parts) {
+            dataOutputStream.writeByte((byte) (part.length()));
+            dataOutputStream.write(part.getBytes());
+        }
+        dataOutputStream.writeByte(0);
+
+        //query type : AAAA
+        dataOutputStream.writeShort(28);
+        //query class : IN
+        dataOutputStream.writeShort(1);
+        dataOutputStream.flush();
+    }
+
+    private void sendIpv4Message(DataOutputStream dataOutputStream, String domain) throws IOException {
         //identification
         dataOutputStream.writeShort(1);
         //flags
@@ -67,8 +108,15 @@ public class DNSQuery {
     }
 
     private void receiveMessage(DataInputStream inputStream, List<String> list) throws IOException {
+        //TODO:analyze flags
         //transaction id(2) + flags(2) + num of query(2) = 6
-        inputStream.skip(6);
+        inputStream.skip(2);
+        byte flag1 = inputStream.readByte();
+        byte flag2 = inputStream.readByte();
+        if ((flag2 & 0x0F) != 0x00) {
+            return;
+        }
+        inputStream.skip(2);
         //the number of answers
         short answers = inputStream.readShort();
         //authority(2) + additional(2) = 4
@@ -76,7 +124,8 @@ public class DNSQuery {
         //skip domain name
         skipDomain(inputStream);
         //query type(2) + query class(2) = 4
-        inputStream.skip(4);
+        short type = inputStream.readShort();
+        inputStream.skip(2);
         //answer records
         for (int i = 0; i < answers; i++) {
             inputStream.mark(1);
@@ -95,10 +144,17 @@ public class DNSQuery {
             //length of ip
             short length = inputStream.readShort();
             //ip
-            if (queryType == 1 && length == 4) {
+            if (queryType == type && queryType == 1 && length == 4) {
                 int address = inputStream.readInt();
                 list.add(getIp(address));
-            } else {
+            }else if (queryType == 0x1c && length == 16) {
+                int addr1 = inputStream.readInt();
+                int addr2 = inputStream.readInt();
+                int addr3 = inputStream.readInt();
+                int addr4 = inputStream.readInt();
+                list.add(getIp(addr1, addr2, addr3, addr4));
+            }
+            else {
                 inputStream.skip(length);
             }
         }
@@ -117,7 +173,18 @@ public class DNSQuery {
         return ((ip >> 24) & 0xFF) + "." + ((ip >> 16) & 0xFF) + "."
                 + ((ip >> 8) & 0xFF) + "." + (ip & 0xFF);
     }
-
+    private String getIp(int add1, int add2, int add3, int add4) {
+        return getHex((add1 >> 16) & 0xFF) + ":" +  getHex(add1 & 0xFF) + ":"
+                +  getHex((add2 >> 16) & 0xFF) + ":" +  getHex(add2 & 0xFF) + ":"
+                +  getHex((add3 >> 16) & 0xFF) + ":" +  getHex(add3 & 0xFF) + ":"
+                +  getHex((add4 >> 16) & 0xFF) + ":" +  getHex(add4 & 0xFF);
+    }
+    private String getHex(int decimal) {
+        if (decimal == 0)
+            return "0";
+        else
+            return  Integer.toHexString(decimal);
+    }
     public void printAnswer() {
         System.out.println("domain:" + domain + ";dns host:" + dnsServer);
         ipList.forEach(s -> System.out.println("ip:" + s));

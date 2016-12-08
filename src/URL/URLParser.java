@@ -23,19 +23,19 @@ public class URLParser {
 
         //set url protocol
         this.url.setProtocol(getProtocol());
-        System.out.println("Protocol:" + this.url.getProtocol());
+        //System.out.println("Protocol:" + this.url.getProtocol());
         //set host name
         String host = getHostName();
         if (host == null)
             host = getIP();
         this.url.setHost(host);
-        System.out.println("Host:" + this.url.getHost());
+        //System.out.println("Host:" + this.url.getHost());
         //set port
         this.url.setPort(getPort());
-        System.out.println("Port:" + this.url.getPort());
+        //System.out.println("Port:" + this.url.getPort());
         //set path
         this.url.setPath(getPath());
-        System.out.println("Path:" + this.url.getPath());
+        //System.out.println("Path:" + this.url.getPath());
         //set parameters
         this.url.setParameters(getParameter());
         this.url.getParameters().entrySet().forEach(stringListEntry -> {
@@ -43,7 +43,7 @@ public class URLParser {
         });
         //set fragment
         this.url.setFragment(getFragment());
-        System.out.println("Fragment:" + this.url.getFragment());
+        //System.out.println("Fragment:" + this.url.getFragment());
     }
 
     private String getProtocol() {

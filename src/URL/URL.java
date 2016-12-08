@@ -92,4 +92,8 @@ public class URL {
     public void setFragment(String fragment) {
         this.fragment = fragment;
     }
+
+    public String getUrl() {
+        return url;
+    }
 }
