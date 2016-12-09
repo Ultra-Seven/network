@@ -1,8 +1,13 @@
 package URL.TLS;
 
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.ShortBufferException;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.SocketAddress;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * Created by Administrator on 2016/12/8.
@@ -23,20 +28,59 @@ public class TLSSocket extends Socket {
     private TLSOutputStream tlsOutputStream;
     private Record record;
     private boolean connect = false;
+    private HandShake handshake;
 
-    public TLSSocket(String host, int port) {
-
+    public TLSSocket(String host, int port) throws NoSuchAlgorithmException {
+        this.host = host;
+        this.port = port;
+        record = new Record(this);
+        handshake = new HandShake(this);
+        tlsInputStream = new TLSInputStream(this);
+        tlsOutputStream = new TLSOutputStream(this);
     }
 
     public void connect() throws IOException {
         Socket socket = new Socket(host, port);
-
+        record.setSocket(socket);
+        try {
+            handshake.connect();
+            connected = true;
+        } catch (InvalidKeyException | InvalidAlgorithmParameterException | ShortBufferException
+                | NoSuchAlgorithmException | CloneNotSupportedException | NoSuchPaddingException e) {
+            e.printStackTrace();
+        }
     }
-
     public Record getRecord() {
         return record;
     }
 
+    public boolean isConnect() {
+        return connect;
+    }
+
     public void setConnected(boolean b) {
+        connected = b;
+    }
+    protected void readAvailable() throws IOException, ShortBufferException {
+        while (record.getReadBufOffset() > 0) {
+            byte[] fragment = record.readFromRecord();
+            if (fragment != null) {
+                tlsInputStream.addBytes(fragment);
+            }
+        }
+    }
+    protected void readFragment() throws IOException, ShortBufferException {
+        byte[] fragment = record.readFromRecord();
+        if (fragment != null) {
+            tlsInputStream.addBytes(fragment);
+        }
+    }
+
+    public TLSInputStream getTlsInputStream() {
+        return tlsInputStream;
+    }
+
+    public TLSOutputStream getTlsOutputStream() {
+        return tlsOutputStream;
     }
 }

@@ -43,18 +43,34 @@ public class HandShake {
     private byte[] masterSecret;
     private byte[] message = {};
     private int messageOffset;
+    private boolean oldSession = false;
 
-    private ByteArrayOutputStream byteArrayOutputStream;
+    private ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();;
 
-    private RSA rsa;
-    private PRF prf;
+    private RSA rsa = new RSA();
+    private PRF prf = new PRF();
     public HandShake(TLSSocket tlsSocket) throws NoSuchAlgorithmException {
         record = tlsSocket.getRecord();
     }
-    public void connect() throws IOException {
+    public void connect() throws IOException, InvalidKeyException, InvalidAlgorithmParameterException, NoSuchAlgorithmException, ShortBufferException, NoSuchPaddingException, CloneNotSupportedException {
         messageDigest5.reset();
         sha1.reset();
         clientHello();
+        parseServerHello();
+        if (oldSession) {
+            readChangeCipherSpec();
+            readFinished();
+            changeCipherSpec();
+            sendFinished();
+        } else {
+            readCertificate();
+            readServerHelloDone();
+            sendClientKeyExchange();
+            changeCipherSpec();
+            sendFinished();
+            readChangeCipherSpec();
+            readFinished();
+        }
     }
 
     private void clientHello() throws IOException {
@@ -118,6 +134,7 @@ public class HandShake {
 
         // old session equal new session
         if (Arrays.equals(sessionId, newSessionID)) {
+            oldSession = true;
             generateKeys();
         }
         sessionId = newSessionID;
@@ -294,10 +311,10 @@ public class HandShake {
      * Generate secrete keys for the Record layer
      */
     private void generateKeys() throws InvalidAlgorithmParameterException, NoSuchAlgorithmException, InvalidKeyException, NoSuchPaddingException {
-        byte[] randoms = new byte[64];
-        System.arraycopy(serverRandom, 0, randoms, 0, 32);
-        System.arraycopy(helloRandom, 0, randoms, 32, 32);
-        byte[] keyBlock = prf.getBytes(masterSecret, "key expansion", randoms, TLSSocket.KEY_BLOCK_LENGTH);
+        byte[] random = new byte[64];
+        System.arraycopy(serverRandom, 0, random, 0, 32);
+        System.arraycopy(helloRandom, 0, random, 32, 32);
+        byte[] keyBlock = prf.getBytes(masterSecret, "key expansion", random, TLSSocket.KEY_BLOCK_LENGTH);
         // set write MAC secrets
         record.setKeyBlock(cipherSuite, keyBlock);
     }

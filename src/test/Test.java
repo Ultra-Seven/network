@@ -2,9 +2,11 @@ package test;
 
 import DNS.DNSQuery;
 import HTTP.HttpClient;
+import URL.TLS.TLSSocket;
 import URL.URLParser;
 
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * Created by Administrator on 2016/12/2.
@@ -14,8 +16,9 @@ public class Test {
         try {
             //testURL();
             //testDNSQuery();
-            testHttp();
-        } catch (IOException e) {
+            //testHttp();
+            testTLS(new String[]{"baidu.com", "80", "/"});
+        } catch (IOException | NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
     }
@@ -29,5 +32,36 @@ public class Test {
     private static void testHttp() throws IOException {
         URLParser urlParser = new URLParser("http://www.berkeley.edu/");
         HttpClient httpClient = new HttpClient(urlParser.getUrl());
+    }
+    private static void testTLS(String[] args) throws NoSuchAlgorithmException, IOException {
+        if (args.length < 3) {
+            System.out.println("usage: TLSSocket <host> <port> <file> [proxyHost] [proxyPort]");
+            System.exit(0);
+        }
+
+        String host = args[0];
+        int port = Integer.parseInt(args[1]);
+        String file = args[2];
+
+        TLSSocket tls = null;
+        if (args.length == 3) {
+            tls = new TLSSocket(host, port);
+        }
+
+        String out = "GET /" + file  + " HTTP/1.1\r\n"
+                + "User-Agent: TLSSocket Test\r\n"
+                + "Host: " + host + ":" + port + "\r\n"
+                + "Connection: Keep-Alive\r\n"
+                + "\r\n";
+
+        tls.getTlsOutputStream().write(out.getBytes());
+        byte[] buf = new byte[4096];
+        while (true) {
+            int count = tls.getTlsInputStream().read(buf);
+            if (count < 0) {
+                break;
+            }
+            System.out.print(new String(buf, 0, count));
+        }
     }
 }

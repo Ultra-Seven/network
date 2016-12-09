@@ -5,9 +5,8 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.ShortBufferException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
+import java.net.Socket;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.MessageDigest;
@@ -213,6 +212,14 @@ public class Record {
         decrypt.init(Cipher.DECRYPT_MODE, new SecretKeySpec(serverWriteKey, tls_encrypt.keyAlg));
     }
 
+    public void setSocket(Socket socket) throws IOException {
+        clientCipher = true;
+        serverCipher = true;
+        clientNum = 0;
+        serverNum = 0;
+        outputStream = new BufferedOutputStream(socket.getOutputStream());
+        inputStream = new BufferedInputStream(socket.getInputStream());
+    }
 
 
     class TLS_ENCRYPT {
@@ -258,5 +265,9 @@ public class Record {
 
     public void setServerCipher(boolean serverCipher) {
         this.serverCipher = serverCipher;
+    }
+
+    public int getReadBufOffset() {
+        return readBufOffset;
     }
 }
