@@ -30,17 +30,19 @@ public class TLSSocket extends Socket {
     private boolean connect = false;
     private HandShake handshake;
 
-    public TLSSocket(String host, int port) throws NoSuchAlgorithmException {
+    public TLSSocket(String host, int port) throws NoSuchAlgorithmException, IOException {
         this.host = host;
         this.port = port;
         record = new Record(this);
         handshake = new HandShake(this);
         tlsInputStream = new TLSInputStream(this);
         tlsOutputStream = new TLSOutputStream(this);
+        connect();
     }
 
     public void connect() throws IOException {
         Socket socket = new Socket(host, port);
+        System.out.println(socket.getInetAddress().getHostAddress());
         record.setSocket(socket);
         try {
             handshake.connect();

@@ -17,7 +17,7 @@ public class Test {
             //testURL();
             //testDNSQuery();
             //testHttp();
-            testTLS(new String[]{"baidu.com", "80", "/"});
+            testTLS(new String[]{"amazon.com", "443", "/"});
         } catch (IOException | NoSuchAlgorithmException e) {
             e.printStackTrace();
         }

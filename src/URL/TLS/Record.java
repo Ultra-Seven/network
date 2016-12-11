@@ -11,6 +11,7 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
 
 /**
  * Created by Administrator on 2016/12/9.
@@ -19,11 +20,12 @@ public class Record {
     public static final int MAX_RECORD_SIZE = 18442;
     //CONTENTTYPE_CHANGE_CIPHER_SPEC, CONTENTTYPE_ALERT, CONTENTTYPE_HANDSHAKE, CONTENTTYPE_APPLICATION_DATA
     public static final byte[] CONTENT_TYPE = {20, 21, 22, 23};
+    private static final byte ALERT_CLOSE_NOTIFY = 0;
     private TLSSocket tlsSocket;
     private Cipher encrypt;
     private Cipher decrypt;
-    private HMacMD clientMAC;
-    private HMacMD serverMAC;
+    private HMAC clientMAC;
+    private HMAC serverMAC;
     //state of reading and writing
     private long clientNum = 0;
     private long serverNum = 0;
@@ -52,7 +54,7 @@ public class Record {
         int offset = 0;
         byte[] range = null;
         while (messageLength > 0) {
-            int sendingLength = messageLength > MAX_RECORD_SIZE ? MAX_RECORD_SIZE : messageLength;
+            int sendingLength = messageLength > 491 ? 491 : messageLength;
             //encrypt the message
             if (clientCipher) {
                 try {
@@ -95,7 +97,10 @@ public class Record {
         }
 
         // check ProtocolVersion
-        assert readBuf[1] == TLSSocket.CLIENT_VERSION[0] && readBuf[2] == TLSSocket.CLIENT_VERSION[1];
+        if (readBuf[1] != TLSSocket.CLIENT_VERSION[0]
+                || readBuf[2] != TLSSocket.CLIENT_VERSION[1]) {
+            throw new IOException("Bad Protocol Version in Record Header");
+        }
         // set the length
         recordLength = (readBuf[3] & 0xFF) << 8 | (readBuf[4] & 0xFF);
         //return fragment
@@ -125,6 +130,7 @@ public class Record {
                 if (fragment[fragmentLength + i] != mac[i])
                     System.out.println("Wrong MAC");
             }
+            System.out.println("MAC valid!");
             byte[] fragmentWithoutMAC = new byte[fragmentLength];
             System.arraycopy(fragment, 0, fragmentWithoutMAC, 0, fragmentLength);
             fragment = fragmentWithoutMAC;
@@ -133,8 +139,13 @@ public class Record {
         }
         // check ContentType
         if (readBuf[0] == CONTENT_TYPE[1]) {
-            assert fragment.length == 2 && fragment[1] == 0;;
-            sendMessage(new byte[] {1, 0}, CONTENT_TYPE[1]);
+            if (fragment.length != 2) {
+                throw new IOException("Badly formed Alert message received");
+            }
+            if (fragment[1] != ALERT_CLOSE_NOTIFY) {
+                throw new IOException("Unsupported Alert received");
+            }
+            sendMessage(new byte[] {1, ALERT_CLOSE_NOTIFY}, CONTENT_TYPE[1]);
             tlsSocket.setConnected(false);
             return null;
         }
@@ -158,11 +169,11 @@ public class Record {
         for (int i = 0; i < paddingLength; i++) {
             messageMaced[macLength - 1 - i] = (byte) (paddingLength - 1);
         }
-        encrypt.update(messageMaced, 0, messageMaced.length, messageMaced);
+        encrypt.update(messageMaced, 0, macLength, messageMaced);
         return messageMaced;
     }
 
-    private byte[] getMAC(HMacMD hMacMD, byte[] sequenceNumber, byte type, byte[] message, int offset, int length) {
+    private byte[] getMAC(HMAC hMacMD, byte[] sequenceNumber, byte type, byte[] message, int offset, int length) {
         //sequenceNumber(8) + contentType(1) + protocolVersion(2) + messageVector(2 + messageLength)
         byte[] plainTxt = new byte[13 + length];
         System.arraycopy(sequenceNumber, 0, plainTxt, 0, 8);
@@ -178,7 +189,7 @@ public class Record {
     private byte[] longToByte(long l) {
         byte[] byteVal = new byte[8];
         for (int i = 0; i < byteVal.length; i++) {
-            byteVal[i] = (byte) (l >> (byteVal.length - 1 - i) * 8);
+            byteVal[i] = (byte) (l >> ((byteVal.length - 1 - i) * 8));
         }
         return byteVal;
     }
@@ -202,19 +213,25 @@ public class Record {
         byte[] clientWriteIV = sub(keyBlock, 2 * (macSize + keySize), ivSize);
         byte[] serverWriteIV = sub(keyBlock, 2 * (macSize + keySize) + ivSize, ivSize);
 
-        clientMAC = new HMacMD(MessageDigest.getInstance(tls_encrypt.macAlg), clientWriteMACSecret);
-        serverMAC = new HMacMD(MessageDigest.getInstance(tls_encrypt.macAlg), serverWriteMACSecret);
+        clientMAC = new HMAC(MessageDigest.getInstance(tls_encrypt.macAlg), clientWriteMACSecret);
+        serverMAC = new HMAC(MessageDigest.getInstance(tls_encrypt.macAlg), serverWriteMACSecret);
 
         encrypt = Cipher.getInstance(tls_encrypt.cipherAlg);
         decrypt = Cipher.getInstance(tls_encrypt.cipherAlg);
 
-        encrypt.init(Cipher.ENCRYPT_MODE, new SecretKeySpec(clientWriteKey, tls_encrypt.keyAlg));
-        decrypt.init(Cipher.DECRYPT_MODE, new SecretKeySpec(serverWriteKey, tls_encrypt.keyAlg));
+        if (cipherSuite == TLSSocket.TLS_RSA_WITH_RC4_128_MD5) {
+            encrypt.init(Cipher.ENCRYPT_MODE, new SecretKeySpec(clientWriteKey, tls_encrypt.keyAlg));
+            decrypt.init(Cipher.DECRYPT_MODE, new SecretKeySpec(serverWriteKey, tls_encrypt.keyAlg));
+        }
+        else {
+            encrypt.init(Cipher.ENCRYPT_MODE, new SecretKeySpec(clientWriteKey, tls_encrypt.keyAlg), new IvParameterSpec(clientWriteIV));
+            decrypt.init(Cipher.DECRYPT_MODE, new SecretKeySpec(serverWriteKey, tls_encrypt.keyAlg),  new IvParameterSpec(serverWriteIV));
+        }
     }
 
     public void setSocket(Socket socket) throws IOException {
-        clientCipher = true;
-        serverCipher = true;
+        clientCipher = false;
+        serverCipher = false;
         clientNum = 0;
         serverNum = 0;
         outputStream = new BufferedOutputStream(socket.getOutputStream());
