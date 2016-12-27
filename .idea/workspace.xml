@@ -7,47 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f431008-821e-4911-95eb-56bec68095d4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/LabGet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/URL/TLS/Encryption/Encryptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file/www.berkeley.edu_.temp" afterPath="$PROJECT_DIR$/file/www.berkeley.edu_.temp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network-pj" afterPath="$PROJECT_DIR$/network-pj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/DNS/DNSQuery.class" afterPath="$PROJECT_DIR$/out/production/network/DNS/DNSQuery.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/Cookie.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/Cookie.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/CookieManager.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/CookieManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/Download/MultiThreadsDownload$ThreadDownload.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/Download/MultiThreadsDownload$ThreadDownload.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/Download/MultiThreadsDownload.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/Download/MultiThreadsDownload.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/HttpClient.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/HttpClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/Response.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/Response.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Encryption/PRF.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Encryption/PRF.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Encryption/RSA.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Encryption/RSA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/HandShake.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/HandShake.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_ENCRYPT.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_ENCRYPT.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_RSA_WITH_3DES_EDE_CBC_SHA.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_RSA_WITH_3DES_EDE_CBC_SHA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_RSA_WITH_AES_128_CBC_SHA.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_RSA_WITH_AES_128_CBC_SHA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Record.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Record.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/TLSInputStream.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/TLSInputStream.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/TLSSocket.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/TLSSocket.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/URL.class" afterPath="$PROJECT_DIR$/out/production/network/URL/URL.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/URLParser.class" afterPath="$PROJECT_DIR$/out/production/network/URL/URLParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/test/Test.class" afterPath="$PROJECT_DIR$/out/production/network/test/Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Encryption/PseudoRandom.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Encryption/PseudoRandom.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DNS/DNSQuery.java" afterPath="$PROJECT_DIR$/src/DNS/DNSQuery.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTP/Cookie.java" afterPath="$PROJECT_DIR$/src/HTTP/Cookie.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTP/CookieManager.java" afterPath="$PROJECT_DIR$/src/HTTP/CookieManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java" afterPath="$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTP/HttpClient.java" afterPath="$PROJECT_DIR$/src/HTTP/HttpClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTP/Response.java" afterPath="$PROJECT_DIR$/src/HTTP/Response.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/Encryption/PRF.java" afterPath="$PROJECT_DIR$/src/URL/TLS/Encryption/PRF.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/Encryption/PseudoRandom.java" afterPath="$PROJECT_DIR$/src/URL/TLS/Encryption/PseudoRandom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java" afterPath="$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/HandShake.java" afterPath="$PROJECT_DIR$/src/URL/TLS/HandShake.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/Record.java" afterPath="$PROJECT_DIR$/src/URL/TLS/Record.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/TLSInputStream.java" afterPath="$PROJECT_DIR$/src/URL/TLS/TLSInputStream.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/TLSSocket.java" afterPath="$PROJECT_DIR$/src/URL/TLS/TLSSocket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/URL.java" afterPath="$PROJECT_DIR$/src/URL/URL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/URLParser.java" afterPath="$PROJECT_DIR$/src/URL/URLParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Test.java" afterPath="$PROJECT_DIR$/src/test/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LabGet.java" afterPath="$PROJECT_DIR$/src/LabGet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,46 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HandShake.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/URL/TLS/HandShake.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Record.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/URL/TLS/Record.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="88" column="26" lean-forward="false" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
-              <folding>
-                <element signature="e#11313#11314#0" expanded="true" />
-                <element signature="e#11349#11350#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RSA.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
               <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PseudoRandom.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/PseudoRandom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -124,8 +57,8 @@
       <file leaf-file-name="LabGet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LabGet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="66" lean-forward="true" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
+            <state relative-caret-position="418">
+              <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,8 +69,8 @@
       <file leaf-file-name="HttpClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HTTP/HttpClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="305" column="26" lean-forward="false" selection-start-line="305" selection-start-column="26" selection-end-line="305" selection-end-column="26" />
+            <state relative-caret-position="253">
+              <caret line="319" column="29" lean-forward="false" selection-start-line="319" selection-start-column="29" selection-end-line="319" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -147,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/src/HTTP/Response.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1558">
-              <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+              <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
               <folding>
                 <element signature="e#3204#3205#0" expanded="true" />
                 <element signature="e#3233#3234#0" expanded="true" />
@@ -160,12 +93,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultiThreadsDownload.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MultiThreadsDownload.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="112" column="36" lean-forward="true" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
+            <state relative-caret-position="456">
+              <caret line="112" column="36" lean-forward="false" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CookieManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HTTP/CookieManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cookie.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HTTP/Cookie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="57" column="22" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#1798#1799#0" expanded="true" />
+                <element signature="e#1850#1851#0" expanded="true" />
+                <element signature="e#1891#1892#0" expanded="true" />
+                <element signature="e#1934#1935#0" expanded="true" />
+                <element signature="e#2098#2099#0" expanded="true" />
+                <element signature="e#2128#2129#0" expanded="true" />
+                <element signature="e#2174#2175#0" expanded="true" />
+                <element signature="e#2212#2213#0" expanded="true" />
+                <element signature="e#2248#2249#0" expanded="true" />
+                <element signature="e#2280#2281#0" expanded="true" />
+                <element signature="e#2330#2331#0" expanded="true" />
+                <element signature="e#2372#2373#0" expanded="true" />
+                <element signature="e#2423#2424#0" expanded="true" />
+                <element signature="e#2457#2458#0" expanded="true" />
+                <element signature="e#2489#2490#0" expanded="true" />
+                <element signature="e#2519#2520#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -241,15 +226,11 @@
         <option value="$PROJECT_DIR$/src/URL/TLS/HmacMD.java" />
         <option value="$PROJECT_DIR$/src/URL/TLS/TLSOutputStream.java" />
         <option value="$PROJECT_DIR$/src/URL/TLS/HMacMD.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/bytes" />
         <option value="$PROJECT_DIR$/src/DNS/DNSQuery.java" />
         <option value="$PROJECT_DIR$/src/URL/URL.java" />
         <option value="$PROJECT_DIR$/src/URL/URLParser.java" />
         <option value="$PROJECT_DIR$/src/test/Test.java" />
-        <option value="$PROJECT_DIR$/src/HTTP/Cookie.java" />
-        <option value="$PROJECT_DIR$/src/HTTP/CookieManager.java" />
-        <option value="$PROJECT_DIR$/src/LabGet.java" />
         <option value="$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java" />
         <option value="$PROJECT_DIR$/src/URL/TLS/Encryption/PseudoRandom.java" />
         <option value="$PROJECT_DIR$/src/URL/TLS/TLSSocket.java" />
@@ -261,6 +242,10 @@
         <option value="$PROJECT_DIR$/src/HTTP/Response.java" />
         <option value="$PROJECT_DIR$/src/HTTP/HttpClient.java" />
         <option value="$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java" />
+        <option value="$PROJECT_DIR$/src/HTTP/Cookie.java" />
+        <option value="$PROJECT_DIR$/src/LabGet.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/HTTP/CookieManager.java" />
       </list>
     </option>
   </component>
@@ -822,7 +807,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="LabGet" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="https://www.berkeley.edu/" />
+      <option name="PROGRAM_PARAMETERS" value="http://www.xiami.com/" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -858,7 +843,7 @@
       <workItem from="1481427318246" duration="213000" />
       <workItem from="1481427548733" duration="3131000" />
       <workItem from="1482074324659" duration="8000" />
-      <workItem from="1482395172705" duration="86227000" />
+      <workItem from="1482395172705" duration="90916000" />
     </task>
     <task id="LOCAL-00001" summary="init commit&#10;">
       <created>1480862313022</created>
@@ -930,15 +915,22 @@
       <option name="project" value="LOCAL" />
       <updated>1481427605576</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="pass some tests">
+      <created>1482820791377</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1482820791384</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237173000" />
+    <option name="totallyTimeSpent" value="241862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -950,7 +942,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.66510415" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3181818" sideWeight="0.33489582" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3181818" sideWeight="0.33489582" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -981,11 +973,12 @@
     <MESSAGE value="init commit&#10;" />
     <MESSAGE value="2016-12-8" />
     <MESSAGE value="TLS init&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="TLS init&#10;" />
+    <MESSAGE value="pass some tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="pass some tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="195" />
+      <option name="time" value="199" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -994,20 +987,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/net/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15705">
-          <caret line="430" column="11" lean-forward="false" selection-start-line="430" selection-start-column="11" selection-end-line="430" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network-pj/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/net/InetAddress.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -1184,44 +1163,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/text/DateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="352" column="18" lean-forward="false" selection-start-line="352" selection-start-column="18" selection-end-line="352" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HTTP/Browser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTP/Cookie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="922">
-          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTP/CookieManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1296,9 +1241,9 @@
         <state relative-caret-position="139">
           <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#466#467#0" expanded="false" />
+            <element signature="e#505#506#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1324,8 +1269,8 @@
         <state relative-caret-position="481">
           <caret line="88" column="26" lean-forward="false" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
           <folding>
-            <element signature="e#11313#11314#0" expanded="true" />
-            <element signature="e#11349#11350#0" expanded="true" />
+            <element signature="e#11313#11314#0" expanded="false" />
+            <element signature="e#11349#11350#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1341,7 +1286,7 @@
     <entry file="file://$PROJECT_DIR$/src/URL/TLS/HandShake.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
-          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1364,16 +1309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LabGet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="66" lean-forward="true" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -1393,7 +1328,7 @@
     <entry file="file://$PROJECT_DIR$/src/HTTP/Response.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1558">
-          <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
           <folding>
             <element signature="e#3204#3205#0" expanded="true" />
             <element signature="e#3233#3234#0" expanded="true" />
@@ -1405,19 +1340,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/text/DateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="729" column="19" lean-forward="false" selection-start-line="729" selection-start-column="19" selection-end-line="729" selection-end-column="19" />
+          <folding>
+            <element signature="e#28243#28244#0" expanded="false" />
+            <element signature="e#28286#28287#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/HTTP/HttpClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="305" column="26" lean-forward="false" selection-start-line="305" selection-start-column="26" selection-end-line="305" selection-end-column="26" />
+        <state relative-caret-position="253">
+          <caret line="319" column="29" lean-forward="false" selection-start-line="319" selection-start-column="29" selection-end-line="319" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="112" column="36" lean-forward="true" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
+        <state relative-caret-position="456">
+          <caret line="112" column="36" lean-forward="false" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/io/ObjectOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="239" column="11" lean-forward="false" selection-start-line="239" selection-start-column="11" selection-end-line="239" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTP/Cookie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="57" column="22" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
+            <element signature="e#1850#1851#0" expanded="true" />
+            <element signature="e#1891#1892#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+            <element signature="e#2098#2099#0" expanded="true" />
+            <element signature="e#2128#2129#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
+            <element signature="e#2212#2213#0" expanded="true" />
+            <element signature="e#2248#2249#0" expanded="true" />
+            <element signature="e#2280#2281#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
+            <element signature="e#2372#2373#0" expanded="true" />
+            <element signature="e#2423#2424#0" expanded="true" />
+            <element signature="e#2457#2458#0" expanded="true" />
+            <element signature="e#2489#2490#0" expanded="true" />
+            <element signature="e#2519#2520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LabGet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTP/CookieManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="67" column="10" lean-forward="false" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

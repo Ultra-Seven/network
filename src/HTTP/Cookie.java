@@ -1,7 +1,6 @@
 package HTTP;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -17,13 +16,13 @@ public class Cookie extends TimerTask implements Serializable {
             "EEE, dd MMM yyyy HH:mm:ss z",
             "EEE, dd-MMM-yyyy HH:mm:ss Z"
     };
-    private Map<String, String> cookiePairs = new HashMap<>();
+    private Map<String, String> cookiePairs;
     private String session;
     private String sessionId;
     private Date expires;
     private String host;
     public Cookie() {
-
+        cookiePairs = new HashMap<>();
     }
     static Cookie getParseCookie(String cookieValue) throws ParseException {
         Cookie cookie = new Cookie();
@@ -36,6 +35,7 @@ public class Cookie extends TimerTask implements Serializable {
             if (index++ == 0 && sub.length > 1) {
                 cookie.session = sub[0];
                 cookie.sessionId = sub[1];
+
             }
             cookie.cookiePairs.put(key, value);
         }
@@ -55,7 +55,7 @@ public class Cookie extends TimerTask implements Serializable {
     }
     @Override
     public void run() {
-
+        CookieManager.unregisterCookie(this);
     }
     public String getValue(String key) {
         return cookiePairs.get(key);
@@ -67,5 +67,29 @@ public class Cookie extends TimerTask implements Serializable {
 
     public void setHost(String host) {
         this.host = host;
+    }
+
+    public String getSession() {
+        return session;
+    }
+
+    public void setSession(String session) {
+        this.session = session;
+    }
+
+    public String getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+    }
+
+    public Map<String, String> getCookiePairs() {
+        return cookiePairs;
+    }
+
+    public Date getExpires() {
+        return expires;
     }
 }

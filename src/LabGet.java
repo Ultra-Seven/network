@@ -1,5 +1,6 @@
 
 
+import HTTP.CookieManager;
 import HTTP.HttpClient;
 import URL.URLParser;
 
@@ -15,11 +16,11 @@ public class LabGet {
         if (args.length == 1) {
             URLParser urlParser = new URLParser(args[0]);
             HttpClient client = null;
+            //init cookie manager
+            CookieManager.getInstance();
             try {
                 client = new HttpClient(urlParser.getUrl());
                 client.sendRequestGet("");
-
-//                System.out.println(Arrays.toString(client.getReadByte()));
             } catch (IOException | NoSuchAlgorithmException e) {
                 e.printStackTrace();
             } finally {
