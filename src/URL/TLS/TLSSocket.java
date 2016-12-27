@@ -42,7 +42,6 @@ public class TLSSocket extends Socket {
 
     public void connect() throws IOException {
         Socket socket = new Socket(host, port);
-        System.out.println(socket.getInetAddress().getHostAddress());
         record.setSocket(socket);
         try {
             handshake.connect();
@@ -51,6 +50,9 @@ public class TLSSocket extends Socket {
                 | NoSuchAlgorithmException | CloneNotSupportedException | NoSuchPaddingException e) {
             e.printStackTrace();
         }
+    }
+    public void connect(int sec) throws IOException {
+        connect();
     }
     public Record getRecord() {
         return record;
@@ -63,6 +65,7 @@ public class TLSSocket extends Socket {
     public void setConnected(boolean b) {
         connected = b;
     }
+
     protected void readAvailable() throws IOException, ShortBufferException {
         while (record.getReadBufOffset() > 0) {
             byte[] fragment = record.readFromRecord();

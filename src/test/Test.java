@@ -5,8 +5,10 @@ import HTTP.HttpClient;
 import URL.TLS.TLSSocket;
 import URL.URLParser;
 
-import java.io.IOException;
+import java.io.*;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+import java.util.zip.GZIPInputStream;
 
 /**
  * Created by Administrator on 2016/12/2.
@@ -17,21 +19,39 @@ public class Test {
             //testURL();
             //testDNSQuery();
             //testHttp();
-            testTLS(new String[]{"amazon.com", "443", "/"});
-        } catch (IOException | NoSuchAlgorithmException e) {
+            testTLS(new String[]{"mirrors.tuna.tsinghua.edu.cn", "443", "/"});
+            //testGzip();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
     }
     private static void testURL() {
-        URLParser urlParser = new URLParser("http://www.google.cn/gwt/x?u=http%3A%2F%2Fanotherbug.blog.chinajavaworld.com%2Fentry%2F4550%2F0%2F&btnGo=Go&source=wax&ie=UTF-8&oe=UTF-8#page-16");
+        URLParser urlParser = new URLParser("http://pj-test.htcnet.moe:8033/test_url_parsing?data1=}don'tforgeturlencode{&data2=345%");
     }
     private static void testDNSQuery() throws IOException {
-        DNSQuery dnsQuery = new DNSQuery("www.baidu.com", "202.120.224.26");
+        DNSQuery dnsQuery = new DNSQuery("pj-test.htcnet.moe", "202.120.224.26");
         dnsQuery.printAnswer();
     }
-    private static void testHttp() throws IOException {
+    private static void testHttp() throws IOException, NoSuchAlgorithmException {
         URLParser urlParser = new URLParser("http://www.berkeley.edu/");
         HttpClient httpClient = new HttpClient(urlParser.getUrl());
+    }
+    private static void testGzip() throws IOException {
+        byte[] bytes = new byte[100];
+        File file = new File("bytes");
+        InputStream inputStream = new FileInputStream(file);
+        InputStream in = new ByteArrayInputStream(bytes);
+        in = new GZIPInputStream(in);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        int size;
+        byte[] buf = new byte[1024];
+        while((size = in.read(buf)) > 0) {
+            outputStream.write(buf, 0, size);
+        }
+        in.close();
+        System.out.println(Arrays.toString(outputStream.toByteArray()));
     }
     private static void testTLS(String[] args) throws NoSuchAlgorithmException, IOException {
         if (args.length < 3) {

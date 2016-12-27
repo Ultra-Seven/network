@@ -6,5 +6,6 @@ package HTTP;
 public class CookieManager {
 
     public static void registerCookie(Cookie cookie) {
+
     }
 }

@@ -19,6 +19,8 @@ public class DNSQuery {
         this.dnsServer = dnsServer;
         DatagramSocket datagramSocket = new DatagramSocket(8080);
         DatagramSocket datagramSocket2 = new DatagramSocket(8081);
+        datagramSocket.setSoTimeout(5000);
+        datagramSocket2.setSoTimeout(5000);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(BUF_SIZE);
         ByteArrayOutputStream byteArrayOutputStream6 = new ByteArrayOutputStream(BUF_SIZE);
         DataOutputStream output = new DataOutputStream(byteArrayOutputStream);
@@ -114,6 +116,7 @@ public class DNSQuery {
         byte flag1 = inputStream.readByte();
         byte flag2 = inputStream.readByte();
         if ((flag2 & 0x0F) != 0x00) {
+            System.out.println("wrong");
             return;
         }
         inputStream.skip(2);
@@ -147,12 +150,17 @@ public class DNSQuery {
             if (queryType == type && queryType == 1 && length == 4) {
                 int address = inputStream.readInt();
                 list.add(getIp(address));
-            }else if (queryType == 0x1c && length == 16) {
-                int addr1 = inputStream.readInt();
-                int addr2 = inputStream.readInt();
-                int addr3 = inputStream.readInt();
-                int addr4 = inputStream.readInt();
-                list.add(getIp(addr1, addr2, addr3, addr4));
+            }else if (queryType == type && queryType == 0x1c && length == 16) {
+                short addr1 = inputStream.readShort();
+                short addr2 = inputStream.readShort();
+                short addr3 = inputStream.readShort();
+                short addr4 = inputStream.readShort();
+                short addr5 = inputStream.readShort();
+                short addr6 = inputStream.readShort();
+                short addr7 = inputStream.readShort();
+                short addr8 = inputStream.readShort();
+                String ipv6 = getIp(addr1, addr2, addr3, addr4, addr5, addr6, addr7, addr8);
+                list.add(ipv6);
             }
             else {
                 inputStream.skip(length);
@@ -167,17 +175,35 @@ public class DNSQuery {
             }
             else
                 break;
+            //i don't know why it happens
+            if ((length & 0xc0) == 0xc0) {
+                inputStream.skip(1);
+                break;
+            }
         }
     }
     private String getIp(long ip) {
         return ((ip >> 24) & 0xFF) + "." + ((ip >> 16) & 0xFF) + "."
                 + ((ip >> 8) & 0xFF) + "." + (ip & 0xFF);
     }
-    private String getIp(int add1, int add2, int add3, int add4) {
-        return getHex((add1 >> 16) & 0xFF) + ":" +  getHex(add1 & 0xFF) + ":"
-                +  getHex((add2 >> 16) & 0xFF) + ":" +  getHex(add2 & 0xFF) + ":"
-                +  getHex((add3 >> 16) & 0xFF) + ":" +  getHex(add3 & 0xFF) + ":"
-                +  getHex((add4 >> 16) & 0xFF) + ":" +  getHex(add4 & 0xFF);
+    private String getIp(short add1, short add2, short add3, short add4, short add5, short add6, short add7, short add8) {
+        short[] segments = {add1, add2, add3, add4, add5, add6, add7, add8};
+        ArrayList<String> ip = new ArrayList<>();
+        for (short segment : segments) {
+            String hex = Integer.toHexString(segment & 0xffff) ;
+            if ("0".equals(hex) && ip.size() > 0 && "0".equals(ip.get(ip.size() - 1))) {
+                continue;
+            }
+            ip.add(hex);
+        }
+        String ret = "";
+        for (int i = 0; i < ip.size(); i++) {
+            String s = ip.get(i);
+            ret = ("0".equals(s)) ? ret : ret + s;
+            if (i != ip.size() - 1)
+                ret += ":";
+        }
+        return ret;
     }
     private String getHex(int decimal) {
         if (decimal == 0)
@@ -188,5 +214,15 @@ public class DNSQuery {
     public void printAnswer() {
         System.out.println("domain:" + domain + ";dns host:" + dnsServer);
         ipList.forEach(s -> System.out.println("ip:" + s));
+    }
+    public String getIp() {
+        if (ipList.size() > 0)
+            return ipList.get(0);
+        else
+            return null;
+    }
+
+    public List<String> getIpList() {
+        return ipList;
     }
 }

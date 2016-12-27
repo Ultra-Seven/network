@@ -110,27 +110,28 @@ public class HandShake {
     //serve hello
     private void parseServerHello() throws IOException, ShortBufferException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, InvalidKeyException {
         byte[] serverMessage = readMessage();
+        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(serverMessage);
         int messageOffset = 0;
         //server hello
-        assert serverMessage[messageOffset] != 2;
-        messageOffset += 4;
+        if (byteArrayInputStream.read() != 2) {
+            throw new IOException("server hello error!");
+        }
+        byteArrayInputStream.skip(3);
+        //messageOffset += 4;
         //protocol
-        assert serverMessage[messageOffset] == TLSSocket.CLIENT_VERSION[0] &&
-                serverMessage[messageOffset + 1] == TLSSocket.CLIENT_VERSION[1];
-        messageOffset += 2;
+        if (byteArrayInputStream.read() != TLSSocket.CLIENT_VERSION[0] || byteArrayInputStream.read() != TLSSocket.CLIENT_VERSION[1])
+            throw new IOException("protocol hello error!");
         // get the server random
-        serverRandom = readByte(serverMessage, messageOffset, 32);
-        messageOffset += serverRandom.length;
+        serverRandom = new byte[32];
+        byteArrayInputStream.read(serverRandom, 0, 32);
         //session id
-        int sessionIDLength = serverMessage[messageOffset];
-        messageOffset++;
-        byte[] newSessionID = readByte(serverMessage, messageOffset, sessionIDLength);
-        messageOffset += sessionIDLength;
+        int sessionIDLength = byteArrayInputStream.read();
+        byte[] newSessionID = new byte[sessionIDLength];
+        byteArrayInputStream.read(newSessionID, 0, sessionIDLength);
         // read cipherSuite
-        int cipher1 = serverMessage[messageOffset] << 8;
-        messageOffset++;
-        int cipher2 = serverMessage[messageOffset];
-        messageOffset++;
+        int cipher1 = byteArrayInputStream.read() << 8;
+        int cipher2 = byteArrayInputStream.read();
+        //set cipherSuit according to server message
         cipherSuite = cipher1 | cipher2;
 
         // old session equal new session
@@ -184,7 +185,7 @@ public class HandShake {
         messageDigest5.update(message);
         sha1.update(message);
     }
-    //Send ClientKeyExchange
+    //send ClientKeyExchange
     private void sendClientKeyExchange() throws IOException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, InvalidKeyException {
         byteArrayOutputStream.reset();
         byte[] header = {CLIENT_KEY_EXCHANGE, 0x00, 0x00, 0x00};
@@ -200,9 +201,10 @@ public class HandShake {
         byteArrayOutputStream.write(new byte[] {(byte) (encrypted.length >> 8), (byte) encrypted.length});
         byteArrayOutputStream.write(encrypted);
 
-        // convert ByteArrayOutputStream to ByteArray and set length fields
+
         byte[] message = byteArrayOutputStream.toByteArray();
-        int msgLength = message.length - 4; // 4 byte header at start
+        // 4 byte header at start
+        int msgLength = message.length - 4;
         message[1] = (byte) (msgLength >> 16);
         message[2] = (byte) (msgLength >> 8);
         message[3] = (byte) msgLength;
@@ -213,15 +215,15 @@ public class HandShake {
         messageDigest5.update(message);
         sha1.update(message);
     }
-    //Send the ChangeCipherSpec message
+    //send the ChangeCipherSpec message
     private void changeCipherSpec() throws IOException {
         record.sendMessage(new byte[]{1}, Record.CONTENT_TYPE[0]);
         record.setClientCipher(true);
     }
-    //Send finish message
+    //send finish message
     private void sendFinished() throws IOException, CloneNotSupportedException {
         byteArrayOutputStream.reset();
-        // Handshake header.  length == 12
+        // handshake header.
         byte[] header = {FINISHED, 0x00, 0x00, 0x0C};
         byteArrayOutputStream.write(header);
 
@@ -241,7 +243,6 @@ public class HandShake {
     //read ChangeCipherSpec
     private void readChangeCipherSpec() throws IOException, ShortBufferException {
         byte[] message = record.readFromRecord();
-        System.out.println(Arrays.toString(message));
         if (message == null || message.length != 1 || message[0] != 0x01) {
             throw new IOException("Got bad ChangeCipherSpec message");
         }
@@ -276,9 +277,7 @@ public class HandShake {
         messageDigest5.update(message);
         sha1.update(message);
     }
-    /**
-     * get random byte array for client
-     */
+    //get random byte array for client
     private byte[] getRandom() {
         byte[] random = new byte[32];
         this.random.nextBytes(random);
@@ -320,14 +319,8 @@ public class HandShake {
             messageOffset = 0;
         }
     }
-    private byte[] readByte(byte[] serverMessage, int messageOffset, int length) {
-        byte[] dst = new byte[length];
-        System.arraycopy(serverMessage, messageOffset, dst, 0, length);
-        return dst;
-    }
-    /**
-     * Generate secrete keys for the Record layer
-     */
+
+    //generate secrete keys
     private void generateKeys() throws InvalidAlgorithmParameterException, NoSuchAlgorithmException, InvalidKeyException, NoSuchPaddingException, IOException {
         byte[] random = new byte[64];
         System.arraycopy(serverRandom, 0, random, 0, 32);
@@ -336,6 +329,7 @@ public class HandShake {
         // set write MAC secrets
         record.setKeyBlock(cipherSuite, keyBlock);
     }
+    //generate master keys
     private void generateMasterSecret(byte[] preMasterSecret) throws IOException {
         byte[] random = new byte[64];
         System.arraycopy(helloRandom, 0, random, 0, 32);

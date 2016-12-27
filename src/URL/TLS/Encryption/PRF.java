@@ -9,11 +9,14 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  * Created by Administrator on 2016/12/9.
+ * pseudo random function
  */
-public class PRF {
+public class PRF extends Encryptor{
+    //md5
     private MessageDigest md5;
+    //sha1
     private MessageDigest sha;
-    private HMAC hmac;
+
     public PRF() throws NoSuchAlgorithmException {
         md5 = MessageDigest.getInstance("MD5");
         sha = MessageDigest.getInstance("SHA");
@@ -39,7 +42,7 @@ public class PRF {
         return result;
     }
     private byte[] prfHash(MessageDigest md, int digestLength, byte[] secret, byte[] seed, int length) throws IOException {
-        hmac = new HMAC(md, secret);
+        HMAC hmac = new HMAC(md, secret);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(length);
         // concatenation seeds
         byte[] A_seed = new byte[digestLength + seed.length];

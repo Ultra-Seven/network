@@ -1,5 +1,6 @@
 package URL;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -15,8 +16,10 @@ public class URL {
     private String charset;
     private String userName;
     private String password;
-    private HashMap<String, List<String>> parameters = new HashMap<>();
+    private String query;
+    private HashMap<String, String> parameters = new HashMap<>();
     private String fragment;
+    private List<String> ips = new ArrayList<>();
 
     public URL(String url) {
         this.url = url;
@@ -77,11 +80,11 @@ public class URL {
         this.password = password;
     }
 
-    public HashMap<String, List<String>> getParameters() {
+    public HashMap<String, String> getParameters() {
         return parameters;
     }
 
-    public void setParameters(HashMap<String, List<String>> parameters) {
+    public void setParameters(HashMap<String, String> parameters) {
         this.parameters = parameters;
     }
 
@@ -95,5 +98,25 @@ public class URL {
 
     public String getUrl() {
         return url;
+    }
+
+    public List<String> getIps() {
+        return ips;
+    }
+
+    public void setIps(List<String> ips) {
+        this.ips = ips;
+    }
+
+    public void addIp(String ip) {
+        ips.add(ip);
+    }
+
+    public String getQuery() {
+        return query;
+    }
+
+    public void setQuery(String query) {
+        this.query = query;
     }
 }

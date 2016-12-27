@@ -9,12 +9,17 @@ import java.util.Random;
 /**
  * Created by Administrator on 2016/12/9.
  */
-public class RSA {
+public class RSA extends Encryptor{
     private Random random = new Random();
+    //certificate
     private ByteArrayInputStream certificate;
+    //exponent
     private BigInteger exponent;
+    //module
     private BigInteger mod;
+    //length of the key
     private int keyLength;
+    //the function of encryption
     public byte[] encrypt(byte[] secret) {
         byte[] magnitude = new byte[keyLength - 1];
         for (int i = 0; i < magnitude.length; i++) {
@@ -33,12 +38,12 @@ public class RSA {
         }
         return result;
     }
-
+    //parse certificate and set exponent and module
     public void setCertificates(byte[] message, int offset) throws IOException {
         certificate = new ByteArrayInputStream(message);
         certificate.skip(offset);
         int asnLength;
-        // Certificate, TBSCertificate
+        // handle certificate
         for (int i = 0; i < 2; i++) {
             certificate.skip(1);
             readLengthFromBuf();
@@ -49,26 +54,25 @@ public class RSA {
             asnLength = readLengthFromBuf();
             certificate.skip(asnLength);
         }
-        // TBS Certificate : serialNumber, signature, issuer, validity, subject
+        // serialNumber, signature, issuer, validity, subject
         for (int i = 0; i < 5; i++) {
             certificate.skip(1);
             asnLength = readLengthFromBuf();
             certificate.skip(asnLength);
         }
-        // SubjectPublicKeyInfo
         certificate.skip(1);
         readLengthFromBuf();
-        // SubjectPublicKeyInfo - algorithm
+        // handle algorithm
         certificate.skip(1);
         asnLength = readLengthFromBuf();
         certificate.skip(asnLength);
-        // SubjectPublicKeyInfo - BitString
+        // handle bit string
         certificate.skip(1);
         readLengthFromBuf();
         // SubjectPublicKeyInfo - BitString - RSAPublicKey
         certificate.skip(2);
         readLengthFromBuf();
-        // SubjectPublicKeyInfo - RSAPublicKey - modulus
+        // handle modulus
         certificate.skip(1);
         int modLen = readLengthFromBuf();
         byte[] mod = new byte[modLen];
@@ -81,7 +85,7 @@ public class RSA {
             else
                 keyLength--;
         }
-        // SubjectPublicKeyInfo - RSAPublicKey - exponent
+        // handle exponent
         certificate.skip(1);
         int exponentLength = readLengthFromBuf();
         byte[] exp = new byte[exponentLength];

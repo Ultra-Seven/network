@@ -11,17 +11,19 @@ public class Response {
     private int statusCode;
     private String expression;
     private String date;
-    private String connection;
-    private long contentLength;
+    private String connection = "Close";
+    private long contentLength = -1;
     private String contentType;
     private String server;
     private List<String> cookies = new ArrayList<>();
-    private String entity;
+    private String entity = "";
     private String location;
     private String transferCoding;
     private String contentEncoding;
     private String range;
     private byte[] bytes;
+    private String header = "";
+    private String Etag;
     public Response() {
 
     }
@@ -148,5 +150,21 @@ public class Response {
 
     public void setRange(String range) {
         this.range = range;
+    }
+
+    public String getHeader() {
+        return header;
+    }
+
+    public void setHeader(String header) {
+        this.header = header;
+    }
+
+    public String getEtag() {
+        return Etag;
+    }
+
+    public void setEtag(String etag) {
+        Etag = etag;
     }
 }

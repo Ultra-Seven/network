@@ -1,12 +1,10 @@
 package HTTP;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TimerTask;
+import java.util.*;
 
 /**
  * Created by Administrator on 2016/12/5.
@@ -15,8 +13,10 @@ public class Cookie extends TimerTask implements Serializable {
     private static final String[] DEFAULT_PATTERNS = {
             "EEE, dd MMM yyyy HH:mm:ss zzz",
             "EEEE, dd-MMM-yy HH:mm:ss zzz",
-            "EEE MMM d HH:mm:ss yyyy"
-    };;
+            "EEE MMM d HH:mm:ss yyyy",
+            "EEE, dd MMM yyyy HH:mm:ss z",
+            "EEE, dd-MMM-yyyy HH:mm:ss Z"
+    };
     private Map<String, String> cookiePairs = new HashMap<>();
     private String session;
     private String sessionId;
@@ -42,8 +42,13 @@ public class Cookie extends TimerTask implements Serializable {
         String expireTime = cookie.cookiePairs.get("expires");
         if(expireTime != null) {
             for(String pattern : DEFAULT_PATTERNS) {
-                SimpleDateFormat fmt = new SimpleDateFormat(pattern);
-                cookie.expires = fmt.parse(expireTime);
+                SimpleDateFormat fmt = new SimpleDateFormat(pattern, Locale.US);
+                try {
+                    cookie.expires = fmt.parse(expireTime);
+                }catch (ParseException ignored) {
+
+                }
+
             }
         }
         return cookie;

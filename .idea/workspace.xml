@@ -1,10 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="LabGet:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9f431008-821e-4911-95eb-56bec68095d4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/LabGet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/URL/TLS/Encryption/Encryptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file/www.berkeley.edu_.temp" afterPath="$PROJECT_DIR$/file/www.berkeley.edu_.temp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network-pj" afterPath="$PROJECT_DIR$/network-pj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/DNS/DNSQuery.class" afterPath="$PROJECT_DIR$/out/production/network/DNS/DNSQuery.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/Cookie.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/Cookie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/CookieManager.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/CookieManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/Download/MultiThreadsDownload$ThreadDownload.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/Download/MultiThreadsDownload$ThreadDownload.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/Download/MultiThreadsDownload.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/Download/MultiThreadsDownload.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/HttpClient.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/HttpClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/HTTP/Response.class" afterPath="$PROJECT_DIR$/out/production/network/HTTP/Response.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Encryption/PRF.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Encryption/PRF.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Encryption/RSA.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Encryption/RSA.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/HandShake.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/HandShake.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_ENCRYPT.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_ENCRYPT.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_RSA_WITH_3DES_EDE_CBC_SHA.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_RSA_WITH_3DES_EDE_CBC_SHA.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_RSA_WITH_AES_128_CBC_SHA.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Record$TLS_RSA_WITH_AES_128_CBC_SHA.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/Record.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/Record.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/TLSInputStream.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/TLSInputStream.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/TLS/TLSSocket.class" afterPath="$PROJECT_DIR$/out/production/network/URL/TLS/TLSSocket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/URL.class" afterPath="$PROJECT_DIR$/out/production/network/URL/URL.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/URL/URLParser.class" afterPath="$PROJECT_DIR$/out/production/network/URL/URLParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/network/test/Test.class" afterPath="$PROJECT_DIR$/out/production/network/test/Test.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DNS/DNSQuery.java" afterPath="$PROJECT_DIR$/src/DNS/DNSQuery.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTP/Cookie.java" afterPath="$PROJECT_DIR$/src/HTTP/Cookie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTP/CookieManager.java" afterPath="$PROJECT_DIR$/src/HTTP/CookieManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java" afterPath="$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTP/HttpClient.java" afterPath="$PROJECT_DIR$/src/HTTP/HttpClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HTTP/Response.java" afterPath="$PROJECT_DIR$/src/HTTP/Response.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/Encryption/PRF.java" afterPath="$PROJECT_DIR$/src/URL/TLS/Encryption/PRF.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/Encryption/PseudoRandom.java" afterPath="$PROJECT_DIR$/src/URL/TLS/Encryption/PseudoRandom.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java" afterPath="$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/HandShake.java" afterPath="$PROJECT_DIR$/src/URL/TLS/HandShake.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/Record.java" afterPath="$PROJECT_DIR$/src/URL/TLS/Record.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/TLSInputStream.java" afterPath="$PROJECT_DIR$/src/URL/TLS/TLSInputStream.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/TLS/TLSSocket.java" afterPath="$PROJECT_DIR$/src/URL/TLS/TLSSocket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/URL.java" afterPath="$PROJECT_DIR$/src/URL/URL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/URL/URLParser.java" afterPath="$PROJECT_DIR$/src/URL/URLParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Test.java" afterPath="$PROJECT_DIR$/src/test/Test.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,37 +66,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TLSSocket.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/URL/TLS/TLSSocket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2907#2908#0" expanded="true" />
-                <element signature="e#2945#2946#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HandShake.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/URL/TLS/HandShake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3477">
-              <caret line="197" column="41" lean-forward="false" selection-start-line="197" selection-start-column="41" selection-end-line="197" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RSA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="25" column="52" lean-forward="false" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+            <state relative-caret-position="481">
+              <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,13 +81,32 @@
       <file leaf-file-name="Record.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/URL/TLS/Record.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2413">
-              <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+            <state relative-caret-position="481">
+              <caret line="88" column="26" lean-forward="false" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#11404#11405#0" expanded="true" />
-                <element signature="e#11452#11453#0" expanded="true" />
+                <element signature="e#11313#11314#0" expanded="true" />
+                <element signature="e#11349#11350#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSA.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PseudoRandom.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/PseudoRandom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,8 +114,18 @@
       <file leaf-file-name="PRF.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/PRF.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="55" column="62" lean-forward="false" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
+            <state relative-caret-position="37">
+              <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LabGet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LabGet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="27" column="66" lean-forward="true" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,31 +133,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HttpClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HTTP/HttpClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+            <state relative-caret-position="606">
+              <caret line="305" column="26" lean-forward="false" selection-start-line="305" selection-start-column="26" selection-end-line="305" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Response.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HTTP/Response.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1558">
+              <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+              <folding>
+                <element signature="e#3204#3205#0" expanded="true" />
+                <element signature="e#3233#3234#0" expanded="true" />
+                <element signature="e#3344#3345#0" expanded="true" />
+                <element signature="e#3371#3372#0" expanded="true" />
+                <element signature="e#3411#3412#0" expanded="true" />
+                <element signature="e#3438#3439#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultiThreadsDownload.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="112" column="36" lean-forward="true" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -142,6 +195,20 @@
       <find>assert</find>
       <find>readChangeCipherSpec</find>
       <find>mac</find>
+      <find>gzio</find>
+      <find>[-97, -85, -91, 7, 30, -55, 109, -12, -24, -113, 101, 120, 100, -28, -18, 120, 95, -13, 93, -100, 36, 102, -121, 101, -79, -57, -48, -124, 106, 94, -56, -114, -67, 40, -5, -75, -77, -43, 85, -78, -11, -41, 11, -41, -45, -126, -36, 68, -111, -101, 104, 114, 19, 69, 110, 82, -110, 27, -49, 22, -67, -106, -28, -58, 69, 86, 32, -9, 23, 35, 99, -59, 63, 11, 4, 109, 46, 15, -60, 103, -28, 12, 25, -13, -43, 38, -28, -32, -14, 28, 83, -50, -91, 84, -99, 127, 119, 124, -10, -12, -25, -29, 95, -84, 126, 83, -13, -72, -97, 99, 78, 26, -109, 52, 14, 99, 92, -55, -111, 90, 118, 30, 101, -127, -122, -112, 83, -82, 36, -126, 15, 49, 112, -28, -79, 40, -23, -127, -107, -117, -74, 81, -84, -33, 74, 59, -28, -61, -108, -62, -24, -87, -67, -83, -120, 92, 7, -76, 38, -5, -48, 105, 70, 85, -67, -82, 7, -24, -60, 41, 120, -120, -5, 17, 76, -4, 7, -72, -2, -94, -96, -64, -105, 2, -80, 108, -85, 85, 25, -86, -7, -81, -9, 70, 76, -27, 115, -105, 84, -17, -51, -111, -81, 16, -40, 44, -119, -63, 62, 97, 122, -105, 49, -24, 87, -113, -91, 72, 39, 80, 75, 30, -40, -55, -36, 115, 98, -36, 24, 44, -100, 49, 11, 18, -56, -10, 99, 47, -57, -37, 21, -92, 18, 86, -69, 56, -18, -114, 26, 94, 42, -118, 28, -125, -110, 125, 18, -57, -23, 19, 6, -3, 12, 62, -99, 93, -13, -110, 78, -120, -70, 90, -125, 40, -54, 18, 69, 89, -126, -108, -59, -99, -47, 85, -30, -106, 91, -76, -65, 0, -91, -69, -78, -46, 44, 86, -43, -44, 108, -62, 113, 85, -69, -82, 101, 117, -30, 57, 38, -98, -65, 62, 41, 30, 116, -110, 29, 104, -51, -53, -102, -120, 101, 0, 70, 87, 35, 1, 120, -107, -70, -20, 124, -31, 50, 60, 54, -1, -124, -116, 83, 7, 84, -98, -25, -88, 61, -69, -28, -91, -116, 69, -72, 47, 66, -126, 57, 83, 101, -117, -109, 31, 53, 58, 87, 91, 71, -84, 100, 47, -117, -99, -18, -83, 69, -118, 92, -73, 95, -22, -14, 69, 4, -71, -91, 66, -81, -17, -101, -65, -73, 100, 23, 125, -106, 95, 126, -21, -19, 117, 118, -73, -70, -35, 110, -95, 20, 29, 60, -16, -32, 20, -105, -126, -30, 83, -93, -90, -94, -64, 13, 53, 59, -32, 40, 58, -61, -108, -119, 113, 72, 35, 71, 118, -15, -18, -24, -47, -27, -51, -39, -18, -93, 14, -70, 98, -25, -90, -37, 27, -25, -97, -48, -104, -35, -35, 90, 7, -110, -105, -86, 18, 73, 78, 10, -110, -93, 74, 53, 2, 82, -8, -115, -102, -14, -60, 80, 94, -63, -67, 123, 74, -74, 122, 20, -90, 52, 121, 22, 32, 86, 4, -63, 106, -32, 14, 11, 67, 105, 81, 35, 117, 40, -11, -26, 27, -101, 108, -18, -46, -36, 86, 68, -36, -17, 13, 38, -37, 2, -8, 42, 94, 118, 56, -116, -29, -84, -6, 122, -82, -6, 61, -5, 50, 109, -11, 125, 91, -87, 86, 26, -114, -124, 53, 105, -103, -30, -119, -87, 29, 89, 98, -74, -90, -46, 37, -8, -44, 95, -95, 58, 67, -118, 126, -112, 51, -120, -77, 44, 14, -9, 55, -70, -55, -121, 3, 89, -75, 85, 121, 83, -79, -65, -8, 0, -39, -30, -121, 12, -11, 123, -124, 11, -34, 68, 47, 95, 41, 84, -5, 47, 52, -82, 102, 102, 104, 70, 92, 77, 79, 102, -113, 38, 90, -67, -22, 89, 105, -7, 42, -42, -36, -55, -87, -122, 13, -69, 78, -62, -125, 64, -88, -2, -103, 112, -22, -94, 3, -48, 67, -22, -79, 65, 28, 95, -56, 115, 26, -43, 57, -57, 60, 82, 8, -50, 5, -115, 46, -54, 103, -26, -28, -13, 127, -90, 86, -15, -66, -36, 51, -109, 112, -35, -124, 59, 44, 11, -35, 60, -29, 26, -120, -107, -61, -106, 106, -97, -19, 117, -99, 66, -93, 88, -49, -94, -78, 67, 15, -66, 94, -66, 79, -58, 28, 48, 93, 58, 43, -52, -125, -65, -58, -124, 88, -90, 63, 122, -112, -90, -32, -62, -28, 3, 38, -69, -108, 11, 48, 25, -106, -18, -108, -82, 89, 116, -22, 23, -3, -5, -70, 78, -23, 58, 24, -42, -100, 46, -43, 51, 0, 122, 6, 21, 110, -37, 51, -68, 21, -98, -30, -19, 8, -86, 95, -123, 116, -127, -31, 44, -17, 49, 121, 112, 67, -33, 82, 33, -118, 126, -67, 48, -80, -82, -19, 25, -81, -108, -70, -71, 91, 5, -52, 91, -77, 32, 46, -74, -28, -86, 91, -1, -71, -12, 80, 85, -69, -13, 74, 2, -72, -74, 47, -95, 41, 114, 115, 71, 20, -76, 91, -9, 2, 57, 79, 68, 52, -15, -16, 1, 0, -20, 11, -11, -3, -54, 48, -35, -94, 59, -89, 26, -54, -75, 29, 50, 77, 57, -93, 113, 44, -78, -91, 58, 102, -32, 54, 119, -83, 122, -88, -93, -86, 53, 75, -61, -68, -8, 114, -51, 20, -77, -43, 56, -59, -104, -55, -87, -87, 106, 111, -93, 84, -45, 45, -35, -12, 34, 37, -83, -66, -103, 39, 15, 37, -34, 75, -66, -97, 51, -5, 108, -50, 92, -43, 78, -98, 113, -116, -12, 117, -34, -59, 3, -104, 12, -2, 23, -4, 123, 77, -23, 69, -74, 97, -45, 59, -116, -41, 126, -102, -96, 98, -112, 106, 22, -20, 99, 72, -69, 25, -97, 27, 119, 51, 92, 87, 121, 4, -109, -14, 76, -43, -17, 32, -87, 86, 81, 49, 4, 50, 74, -85, -62, 16, -13, -77, -12, 56, 69, 83, -9, 118, -116, -80, 109, -107, 77, -44, -58, -1, -102, -111, 14, -28, 61, 44, -45, -39, -61, 38, -41, 95, -49, 114, -19, -28, 81, 63, -119, -71, -32, 0, -90, 116, -28, 23, -31, -28, 27, -29, 102, 22, -85, -89, -17, 115, -7, -26, -57, -117, -56, 11, 114, 105, -107, -85, 99, 59, 79, 76, -123, -37, 97, 123, -23, -27, 51, 87, -1, -31, 49, 115, -100, 53, -103, 112, 120, -60, 51, 46, -105, -110, -51, 121, 126, -121, 122, 106, 83, -72, 60, -52, -28, -60, -6, -88, 49, 46, 67, 87, -46, -105, 24, -19, 63, 60, 118, -14, -82, 82, -85, -1, 51, 27, -96, -79, 43, -56, -79, -13, 127, -81, 19, -52, -14, -91, -41, -90, 23, 93, -25, -53, -29, -117, -77, -11, -105, 101, -25, -53, 72, 83, -38, 3, -75, 121, -94, -66, -112, 92, -36, -106, -49, -85, 103, 5, 87, 106, 89, -117, -104, 126, -111, -14, 107, 86, 12, -75, -62, -55, 84, -67, -103, -36, -72, -64, 126, 98, -78, -55, 67, 44, 121, -128, -114, -35, 54, -92, -65, 62, 33, 63, -79, 17, 10, -1, 1, -40, -35, 1, -111, 101, -44, -91, 10, -23, 37, -13, -65, -102, -15, 114, -12, -50, -127, -38, -113, -22, -86, -66, -7, -114, -81, 6, -93, 123, 2, 95, 11, 8, -107, 125, 8, -83, 67, 21, 93, -87, 30, 108, 122, 71, 47, -87, 74, -75, -6, 19, 30, -7, -15, -60, 125, -9, -65, 115, 124, -75, -26, -73, -33, -120, 9, -12, -71, -109, 20, -40, -95, 109, -101, -6, -54, -75, -24, -48, 119, -12, -125, 59, -118, -29, 81, -64, 104, -62, -107, 92, 98, 26, -54, -66, -24, -68, 123, -113, 96, 58, 27, 110, -49, -19, -23, 31, 110, -56, 35, -9, 29, -24, -16, -61, 127, 119, 116, -96, -57, 94, 61, 52, 95, 87, 106, -32, 23, -59, 74, 61, -22, -115, 89, 103, 119, 99, -17, -47, -34, -93, -18, 78, 111, 107, 119, -64, -74, -69, -101, -69, -37, -101, -37, 91, -61, -99, -18, -50, -26, -96, -69, -41, -35, -14, 118, -4, 71, 91, 91, -125, 61, -26, -10, 54, 55, -96, -40, 78, 111, 115, 71, 53, 92, 52, -74, 114, 3, 49, -128, 115, -38, -61, 60, -110, -18, 101, -101, 124, 67, 86, -55, 71, -87, 90, -66, 105, 27, -86, -84, -70, 56, 125, 79, -53, 82, -85, 31, -127, -107, -66, 113, -111, 4, -89, 44, -53, -109, -10, 71, -51, -103, 25, 15, 25, -40, -94, -5, 48, -4, -16, -127, -60, -85, -43, 3, 25, 120, 106, 117, 58, 68, -116, -29, 9, 40, -98, -77, 49, 23, -33, -79, -120, -124, 49, -34, 43, 7, 26, 8, -49, 0, 17, -12, -38, -96, 24, 31, -74, -11, -32, -128, 99, 37, -75, -127, 59, -90, 98, 12, 56, -95, 20, 92, -86, -121, -117, -44, -102, -62, 57, 110, -10, 61, -57, 92, 114, 68, -20, 7, -63, -27, 57, -113, 50, -128, 13, -36, 118, 46, 97, -97, -37, 100, -115, 52, 65, 115, 69, 62, 16, 25, 30, -49, 109, -9, 86, 15, -92, -65, -2, 77, -69, 1, -18, -86, 43, -31, -76, 109, -60, -36, -106, 61, -71, 90, 105, -55, -13, 124, -48, 29, -80, -83, -104, 79, 126, -7, 47, 30, -26, 41, 37, -35, 93, 103, -93, -117, -127, -92, 45, -7, 0, -6, 5, -101, 14, 98, 60, -108, 3, 26, 15, 111, 28, 31, -56, -119, -67, -58, -19, 85, -6, 66, 113, -96, 98, 65, 95, 57, -121, -22, 62, 3, 73, -120, 74, 112, -63, -121, -11, -96, -77, 71, 100, -113, 60, 124, 72, -66, -2, 70, 39, 43, -93, 110, -43, 85, -57, 40, -37, -74, 91, -69, -80, -122, 4, -36, 94, 117, -15, 54, -13, -52, -112, 17, -69, 107, -43, 75, 89, -85, -82, 8, -72, -49, 94, 39, 109, 107, 72, -63, -104, -125, -34, 118, 58, -78, 44, 13, 88, -102, -75, -65, 1, -95, 0, -39, -21, 0, 31, -53, -121, 75, -38, -77, -83, 123, 1, 80, -81, -67, -86, 115, 87, -95, -2, -84, -114, -72, -86, -91, 32, 103, 40, -66, 120, 9, 67, 79, -76, -81, 69, 48, -110, 74, -4, 105, 68, 67, 14, -45, 96, 48, 69, 70, -125, 46, 85, -61, -47, -128, 1, 3, -39, -88, -80, 99, -99, 59, -66, -57, -128, -19, 17, -48, 23, -71, 97, -43, -59, -69, 33, -38, 54, -9, -27, 0, -106, -60, 87, -103, 67, 96, 15, 0, 111, 98, -64, -90, 115, -10, -31, 120, -77, -120, 15, -57, -14, 46, -6, 34, 48, -127, 2, -28, -48, -128, -113, -94, 125, 15, -41, 6, -46, 3, -94, -113, -101, 57, 89, -100, -104, 72, -59, 75, 85, 75, 29, -42, -35, 68, -86, 33, -100, -74, 61, 19, 67, -74, -41, 12, -58, -21, -92, 20, 66, 80, -113, -64, -117, 2, -46, 112, 97, 61, 23, -21, -28, 3, 88, 51, 102, -12, -80, -97, 48, 20, 66, -10, -47, 126, 80, -126, 88, -77, -119, 43, 3, 18, -82, 50, -48, 13, -43, 100, -9, 116, -106, -36, 80, -26, 122, 83, 47, 96, -118, -93, -75, 21, 97, 26, 7, -105, -33, 103, -19, -126, 81, 36, 77, -43, 102, -79, 63, -38, -100, -85, -31, -104, 102, -85, -80, 95, 32, 49, -96, 1, -20, -106, 43, 41, -45, -42, 57, -85, -21, 122, -21, 91, 4, 100, 55, -59, 106, -75, -42, 72, -81, -46, 15, 41, 46, 101, -39, -66, -122, 57, -61, -1, 53, 104, 93, -115, -49, 85, 5, 10, -30, -122, 101, 12, 78, -20, 125, 9, -76, 74, 54, 9, -56, 21, 48, -16, 109, 96, 38, 32, -35, -117, -88, -35, 3, -43, 87, 25, 77, 104, -76, 96, 69, -33, 63, 65, -90, 106, -37, 37, 45, -82, 106, -32, 116, 122, 21, -30, 15, 121, -42, 0, 82, -9, -61, 64, 78, 89, 8, -42, -44, 28, 112, 93, 74, -80, -20, 76, 105, -26, 54, 66, 92, 39, 24, 26, 55, -71, 6, -127, 43, -83, 109, -38, 117, -126, -51, -42, 85, 85, -81, 10, -43, -92, 56, 20, -75, -110, -59, -46, 52, 78, -83, 26, -17, -124, 98, 4, 36, -76, 78, -29, 20, 38, 90, 121, 99, -111, 124, 83, 122, 66, -15, 66, 35, 34, 43, -20, 19, 75, 99, 2, 22, -111, -120, -127, 81, -64, -49, 104, 99, -59, 53, 100, 123, 87, 55, -80, 70, 44, -8, 95, 53, -23, 12, 72, 95, -59, 93, 117, 100, 70, -81, 20, 33, 1, -87, 89, 68, -125, 106, 41, 66, 12, 95, -128, 114, 41, -6, -14, 59, -43, -117, 84, -7, -43, 97, -80, 79, -49, -114, -49, 94, -97, -18, 19, 123, -103, -47, 32, 106, 56, -54, -127, 48, 83, -65, 28, 10, -12, 31, -101, -12, 59, -110, 22, -3, -51, 19, 64, 85, 41, 25, -73, -40, -32, 97, -49, -112, -72, 85, -53, -43, 74, -26, 19, 16, -74, -78, -123, -61, 94, 51, -56, -42, 57, 13, -67, -18, 69, -35, 67, 39, -67, -46, 61, -4, -71, -72, 123, 69, -18, -89, -21, 30, -78, 40, 54, 91, 116, -47, 32, 92, 118, 17, -89, 121, 114, 66, -45, 56, 23, 44, 64, 94, -57, 126, 5, -104, -6, -61, 36, -112, -3, -78, 30, 120, 58, 27, -113, -111, 91, -46, -78, 34, 69, 17, 55, -98, 4, -90, 58, -38, -117, 70, 92, 48, -72, -78, 79, -16, 110, -65, 117, 2, -19, -100, -94, -111, 40, 53, 47, -18, 34, 76, 82, 118, -119, 106, 35, 3, -106, -84, 84, 64, 94, -37, 127, 67, -84, 106, -92, -55, 86, -79, 41, 2, 70, -13, 101, -118, -63, -31, 49, -113, -28, -66, 111, -37, -60, -91, -84, -11, 37, 106, 72, 7, -91, -84, 66, -34, -82, -101, 118, -91, 125, 116, -102, -32, -72, -20, -109, 71, -96, -113, 77, 6, -40, -81, 60, -110, -42, -91, -55, -35, -84, -28, -126, -103, 29, 7, -63, -113, 44, -3, 81, -34, 62, 32, 59, 106, -14, -64, -41, 8, 5, -108, -17, 21, 41, 65, 12, -93, 85, 47, 4, -3, 125, -86, -106, 19, -10, 109, 69, 10, -69, 4, 46, 31, -36, 124, 1, 96, -10, -79, 14, 36, -101, 28, 32, -91, 53, -109, 107, -31, 35, 60, 20, -51, -16, 52, -13, 64, 21, -125, -99, -70, 95, 41, 94, 34, 67, 102, 83, -97, 48, 113, 1, 108, 4, -103, -14, -70, -59, -11, 5, -7, -89, 33, -70, 120, -117, 10, -99, -47, 65, -64, -78, 69, -71, -81, -28, 45, 11, -90, -78, -18, -56, -107, -46, -86, -26, 63, 40, -5, 92, -58, 17, -25, -8, 80, -19, 29, -104, 103, -60, -105, 84, 30, 127, -74, 20, -100, -94, -44, 61, 47, 126, 50, 94, -84, 12, 33, 80, -12, 85, 30, 100, -100, 96, -103, -71, 33, -52, -58, 41, -109, -75, -25, 71, 81, -42, -62, 44, -95, 7, -78, 90, -10, 126, 44, -25, -57, -78, 50, 20, 117, 105, 51, -125, -4, -24, -70, 65, -98, 17, -7, 55, -67, -34, -34, -34, -6, -93, -73, -115, -7, 70, -28, -33, -20, -19, -52, -105, 41, 100, 90, -13, -61, 23, -87, -104, -48, 39, 2, 115, 68, 30, 100, 81, 87, -40, -38, -24, 12, 115, -17, -94, 26, 47, 49, 43, 55, 42, -42, -128, 53, -98, -92, 116, -62, 82, 91, -5, -35, 79, -64, 17, 111, -37, -24, 121, 107, -85, 61, 101, 89, -98, 70, -86, -47, -46, -102, -110, 107, 19, 106, 66, 126, 37, -61, 39, -91, 20, 73, -45, 65, -62, -62, 104, -123, 35, 35, 23, 77, -104, 24, 12, 100, -127, 83, 83, -34, 110, -120, 117, 44, -64, 97, -91, 108, 29, 29, 3, -7, 16, 80, 1, -121, 56, 58, 46, 50, -67, 80, 113, -111, -17, -29, 75, -78, -71, -114, -31, -64, -51, -37, -31, 40, 117, -126, -116, 45, -24, 104, 14, -9, -49, 69, -106, 86, 108, 111, -68, 53, -72, 109, -87, 50, -106, -62, 24, -78, -26, -85, 52, 117, 109, 65, 65, 104, 93, -106, -118, -36, -127, 80, -75, -20, -46, 112, 38, 109, 86, 117, -63, 17, -119, 23, 79, 0, -97, 6, 72, -43, 8, -45, 118, 17, 74, 81, -111, 20, 84, 15, -32, 12, 113, -1, -56, 94, 83, 48, -76, 19, 35, -3, 37, 4, -46, -96, 1, 49, -39, -79, -22, -27, 77, -39, -70, 6, -108, 38, -9, -83, 85, -32, 103, -45, -127, -117, -107, -32, 13, 90, -80, 73, 127, 53, 76, 101, -41, 106, -53, -26, -103, -85, -43, 34, 43, -38, 49, 110, 41, 113, 51, 62, 114, -109, 64, 40, 105, 60, 43, 54, -64, 125, -105, 114, 95, -35, 121, -14, 84, 94, 82, -115, 123, -7, 79, -44, 46, 41, -95, -67, 1, -15, 62, -89, 41, -109, 5, -113, 100, -7, -74, -47, 34, -93, 20, 29, 1, -27, 70, -107, -91, 92, 92, 73, 105, 99, -94, 6, -32, -15, -44, 11, 22, 2, 112, -70, 27, 6, 70, 89, -80, -124, -47, -46, 114, -72, -108, -46, 90, -87, -60, 24, 116, 124, 17, 52, 22, 31, -128, -44, -113, -124, 4, 114, -115, 30, 35, -102, -110, -117, -12, 8, 18, -18, 24, 26, -69, -60, 11, -120, 47, -95, 118, -84, -8, -65, 64, 81, -90, 41, 53, -31, -128, 52, -115, 70, -78, -95, 89, 60, -119, 65, -12, -10, 42, 67, -54, -91, 18, -53, 38, 125, 112, -77, 78, -119, -43, -64, -86, -110, -40, -66, 78, -128, 54, 63, -102, 69, 28, 11, 79, 14, 96, -76, -43, 2, -98, -76, -48, 91, -26, -98, -91, -62, 90, 22, 42, 27, 72, 54, -4, 8, 41, 38, 114, 108, 21, -13, -90, 10, 111, 16, -46, 76, 70, -87, 82, -57, 48, 52, 44, 4, -10, -101, 39, 15, 83, -22, -108, -71, 40, -16, 48, 126, 79, -40, -112, -126, 61, -43, 46, 81, 6, 42, -65, -2, -23, -27, 108, 80, -61, 2, 31, -106, 89, 101, -87, 66, -35, -43, -39, 65, -76, 45, 69, 10, -53, -44, -29, 62, 6, -109, -91, -2, 107, -9, -70, -122, -122, -10, 3, 124, -31, -122, -86, -101, -7, -116, -30, 91, -77, 81, 13, -95, 19, -100, -32, 69, 69, 109, -123, -55, -75, 85, 0, 52, -112, -84, 93, -106, 81, 60, 82, -98, 38, 40, -54, -115, 57, 6, 50, 107, -4, 86, -89, -107, -68, 119, -20, -81, 35, 24, -108, 58, -61, -51, 20, 13, 36, -85, -120, -112, -119, 18, -115, 55, -115, -101, -33, -40, 125, 117, 99, -38, -78, -60, 50, 61, -69, -98, 84, -90, 84, -99, 80, 43, -123, -7, 35, 55, -46, -55, -37, 86, -12, 118, 33, -14, -30, -103, -36, 12, -3, 99, 64, -89, -32, -124, 29, -1, -8, -126, 120, -79, -49, 8, 21, -45, -56, 27, -125, -102, -121, 41, 40, -104, -70, -123, 69, 79, 49, -10, 87, 44, -83, -87, -117, -58, -75, -5, 0, -45, -84, 92, 126, 66, 45, -95, 91, -124, -30, -82, 72, 61, 12, 23, 86, -9, -77, 84, 119, 82, -87, -19, -45, -25, 52, -31, -106, 89, 94, -64, -122, -122, 60, 21, -39, -87, -124, 119, 86, 111, 19, -60, 86, 55, 40, 30, 79, 33, 15, 35, 97, 101, -45, 111, -70, 111, 13, -104, 58, 8, 61, 80, -33, 67, -25, 48, 60, 8, -22, -31, 49, -61, 87, -105, 64, 19, -116, -42, 103, -54, 42, -75, -116, -100, 101, -52, 25, 52, 34, -44, -19, -7, 21, 43, 98, 38, -98, -40, 40, 81, -11, 80, -112, -26, 33, 80, -118, 71, -77, 17, 69, 77, -109, -71, -24, -111, -100, 92, -14, -31, -112, 99, 88, 91, -127, -97, -111, 68, -116, -40, -102, 118, -113, -120, 45, -31, -65, 82, 120, -109, -113, -41, 112, 82, -55, 35, -72, 118, -44, -56, 73, -106, 70, -49, 82, -93, 84, -24, 3, 24, 83, -80, 14, 126, 79, -83, -43, 27, 89, -73, 100, -16, 43, -62, 64, 45, -110, -78, 127, 106, 25, -31, -121, 97, 91, 117, 18, -6, -41, 39, 78, -81, -71, -105, -10, -102, -94, -38, 76, 63, 27, -108, -117, 41, 87, -109, -84, -71, -98, 89, 69, -71, -37, 81, 100, -119, 122, -85, 102, 25, 82, -54, 42, -32, 72, -33, -44, 94, -49, -56, -24, -64, 122, 107, -49, 88, -78, -112, -40, 96, -57, 94, -61, -125, -72, 69, 65, -78, -44, 114, -12, -108, 124, 39, 69, 87, -83, 16, 21, -38, -67, 79, 92, 22, 14, -104, 95, 33, -95, 97, 98, -43, -73, -126, -123, -95, -70, -83, -42, 98, -43, 116, 12, -65, -51, -12, -10, -96, -44, -23, 11, -85, -82, 19, 91, 87, 95, -70, -126, 108, 1, 106, 92, -83, 20, 106, 15, 67, -74, -49, 30, -29, -72, -82, 20, -60, 50, 105, -48, -49, -38, -118, 55, -111, -21, -13, 106, -114, 86, -2, -32, 55, -88, 110, -108, 94, 104, -37, 29, -36, -33, 17, 49, 47, 43, -9, -21, 70, 44, -21, -80, -24, -4, -11, 127, 117, 0, -92, -5, 78, -40, -43, 21, -99, -113, -22, 100, -33, -77, -57, -54, 80, -5, 104, -36, 80, 80, -10, 47, -4, 125, 98, 111, -20, 117, -9, 118, 55, -63, -117, -38, -36, -36, -40, -34, -23, -39, -21, -86, 60, -47, 33, 124, 89, 86, 35, 3, -86, 27, 48, 83, -5, -87, 121, -92, 11, -56, -30, 18, 77, -4, -25, 74, -15, -114, -102, 12, 13, -126, -51, -98, -104, 82, -79, -78, 96, -61, -92, 103, 71, -110, -80, -46, 27, 6, -36, 115, -82, -73, 2, -124, 44, 27, -57, -120, -73, -84, 104, 43, 91, 27, -71, 106, -65, 0, -123, 105, 87, 21, 18, -104, 85, -119, -43, -113, 87, 106, 85, 12, 76, -17, 2, 71, -67, -76, -40, -116, -94, 100, -28, 9, 99, -39, -75, 8, 22, -91, -50, -44, -70, -98, 41, -26, 5, -79, 96, 34, 51, 10, -36, -100, -85, -80, 107, 51, 51, -58, -41, -91, -68, -21, -3, 4, 49, 76, -63, -19, -58, 13, -52, 92, -99, -54, -112, 45, 125, -117, -43, -114, -64, 109, 51, -51, -82, 89, 15, -13, 52, 48, 41, 72, 4, 98, 101, 19, -39, 67, -12, -96, -28, 69, -74, 71, -37, -72, -42, 55, 102, -24, 44, 29, -95, -81, -93, -99, -105, 1, 77, -59, 81, 20, -93, -123, -95, 25, -74, -13, 31, 100, 12, -91, 2, -71, -17, 6, -97, 63, -72, 100, 4, 95, 75, 1, -42, -52, -40, 40, 6, 39, -13, 63, 58, 114, -93, -1, 55, 51, -53, 89, -64, 56, 72, -115, -124, 102, -29, -29, 52, -91, 83, -96, -58, -20, 62, 9, -52, 67, -46, -71, -14, 94, -42, 54, -79, 59, 54, 65, 127, -56, 72, 59, -98, 19, -9, 95, -126, -127, 20, -68, -44, 85, 112, 23, 70, -57, 94, 43, -128, -66, -23, -67, -107, 108, 33, 37, -14, -33, -1, 6, -35, 57, 95, 7, 84, 4, -59, 21, -73, -9, -19, 110, 117, 117, 20, 111, 57, 62, -57, 109, 9, -25, 66, -98, -124, 100, 106, 126, -69, -46, 93, 111, -63, -65, 109, -75, 121, 71, 41, 65, -123, -68, 94, -51, 40, -43, -100, 90, -47, 34, -81, -24, 5, -109, -101, -113, 120, 52, -108, -105, 94, 37, 99, -18, 9, -36, 121, 66, -43, -34, 19, -7, 70, 11, 26, 54, -118, -24, 69, -99, -54, -66, 93, 10, -26, -55, -128, 12, -30, 15, 80, 35, 98, 98, -82, -118, 10, 4, -23, -123, 112, 7, -54, 66, -47, -126, -125, 80, -1, 58, 88, 79, 118, 53, -89, -63, 115, 89, -23, 36, -58, 43, 45, 68, 91, -9, -86, -20, 6, 72, 2, -1, -107, -127, 79, -25, -30, -93, -114, 25, -40, -112, 109, -78, -79, -43, -83, 106, 112, 61, -116, 38, -84, -6, 105, -79, -59, -122, -81, 8, -50, 68, 43, 13, -37, -116, -82, -35, -44, -12, 78, 116, -64, -90, -10, -29, 84, -97, -41, -64, 17, 99, -66, -101, 92, -116, -4, 114, -49, -44, -20, 62, -87, 126, 105, -109, -106, 106, 89, -67, 82, -119, -85, -56, -6, -116, 94, -97, -76, 49, -82, 97, 108, -43, 68, 26, -87, -85, 101, 85, 58, -52, -44, 67, 57, -91, -31, -118, -37, 95, -92, -107, -117, 54, -85, -108, 8, 89, 73, 122, 111, 87, -123, 105, 104, -102, -116, 35, 13, -5, -123, 108, 15, -96, -4, 36, -73, 69, -107, 115, -96, -100, 25, -59, 66, 3, 84, 114, -73, 50, 65, 11, 11, 14, -25, 56, -36, 48, -44, -58, -6, 92, -18, 70, -128, 63, -121, 26, -108, 94, -122, 63, 32, 107, 107, -68, -78, 16, -115, -118, 75, -6, -2, -86, -44, 27, -2, -42, -27, -66, 52, 70, -52, 124, 45, 29, 126, 53, 95, 91, -25, -72, 43, -21, -36, 90, 69, -117, -81, -80, -128, 74, 124, 37, 32, 85, 71, -59, -107, 52, 17, 0, 42, 100, 68, 108, 66, 126, 57, 115, -107, -55, -33, -42, 21, -42, -51, 18, -65, -30, 39, 80, -13, -67, -115, -35, -82, -83, -73, 106, -24, -21, -72, -19, -99, -115, 34, 73, -42, -61, 121, -52, 0, 80, -55, -86, -91, 127, -127, 98, -37, 39, 31, -119, 77, -13, 44, -58, 36, 123, -97, 0, -77, -53, 19, -30, -96, -8, 4, -4, -36, -128, -97, -96, -99, 65, 77, 15, 82, 21, 83, -79, 101, 60, 88, -102, 56, 40, -42, -70, 74, -116, -10, -101, -50, 98, 17, -58, 117, -33, 9, -16, 22, 116, -54, 4, 65, -40, -5, 118, 6, 48, -124, 50, -15, 109, 114, 101, 98, 61, -46, -47, 86, 86, 36, -86, -115, -52, -60, 54, -11, -96, 66, 113, -62, 125, -11, -38, 19, -13, -55, 96, 90, 104, -39, 115, 80, -23, 5, 73, -93, -126, -104, -13, 3, 112, -80, -112, -16, -58, 74, -113, -42, -74, 87, 111, 28, 4, 85, -27, -53, 29, 3, 101, -39, 92, -55, 56, 123, 85, -63, -112, -54, -25, -122, 61, -115, 95, -83, 84, -73, -83, -108, -74, 2, -46, -98, 30, 45, 112, 73, 45, 93, 123, -11, -32, -85, 21, -71, 39, -31, -24, 122, 63, -78, 40, -113, 126, -28, 87, 43, 20, -67, -41, -78, 74, 57, -109, -126, 10, -113, -67, 56, 88, -77, 58, -70, 47, -48, 46, -3, 117, -54, 70, 35, 105, 48, 36, -14, -36, -102, -54, 17, -99, 110, -73, -41, -21, -20, -19, -18, -19, -127, 42, -4, -42, 90, 123, 5, -77, -87, 59, 12, -30, 24, 120, 3, -104, -32, 9, -96, -37, 94, 69, 116, -80, 115, -19, -43, -50, -93, 109, -36, 104, -39, 93, -107, -19, 75, 63, -4, 8, 109, -64, 3, -22, 54, 83, -26, 96, -80, -48, -73, -91, -21, -125, 85, -80, -57, 122, 8, 75, -110, -40, 80, 126, -2, 76, -18, 13, -44, 95, 81, 54, 35, -34, 51, 15, -52, 43, -1, -4, -10, 27, 121, 35, -99, -19, -38, -27, -13, 48, 72, -57, -98, 23, -25, -22, -14, -7, -41, -57, 78, 111, -85, -69, -35, -35, -35, 118, 30, -31, 109, -13, -77, -91, -27, 85, -11, 24, -65, -59, 61, -29, -78, 0, -108, -88, 91, 54, 38, 34, 0, 54, -48, 50, -111, -121, -111, 34, 19, 90, 46, 51, -99, -80, 101, -90, 36, 40, 10, 41, -110, 84, 2, 31, 81, 29, -93, 80, -17, 31, -120, 125, 27, -75, -22, -30, 65, 39, -33, 18, -37, 88, -119, 66, 4, 54, -40, -24, -107, -121, 19, -64, -119, 90, 35, -74, -34, 89, -20, -48, -120, 6, 83, -36, -29, 47, -39, 2, 31, -67, 19, -10, 65, -47, -91, -59, -45, 74, 99, 92, -125, -120, -123, 3, 61, -94, 96, 82, 74, -14, -126, 25, 5, 127, 75, 17, 51, -29, 123, -13, -106, -31, -33, -73, 99, -72, 77, 44, 125, -114, -43, -83, 93, 13, -78, 31, -5, -66, 69, 106, 22, -96, -68, -4, 78, 23, 54, -58, 95, -35, -18, -85, -93, 93, 57, -3, -118, 91, 14, -51, -71, 122, -116, -88, -95, 109, -126, -121, 97, -97, -80, 65, 62, 2, 31, 41, -50, -16, 28, 32, -56, 15, 113, 72, -41, 5, -23, -39, -36, 4, -127, -37, -38, -35, -38, -35, -63, -51, -43, 120, 84, -10, -1, 3, 17, 93, -28, 11, -33, -73, 0, 0]</find>
+      <find>-97, -85, -91, 7, 30, -55, 109, -12, -24, -113, 101, 120, 100, -28, -18, 120, 95, -13, 93, -100, 36, 102, -121, 101, -79, -57, -48, -124, 106, 94, -56, -114, -67, 40, -5, -75, -77, -43, 85, -78, -11, -41, 11, -41, -45, -126, -36, 68, -111, -101, 104, 114, 19, 69, 110, 82, -110, 27, -49, 22, -67, -106, -28, -58, 69, 86, 32, -9, 23, 35, 99, -59, 63, 11, 4, 109, 46, 15, -60, 103, -28, 12, 25, -13, -43, 38, -28, -32, -14, 28, 83, -50, -91, 84, -99, 127, 119, 124, -10, -12, -25, -29, 95, -84, 126, 83, -13, -72, -97, 99, 78, 26, -109, 52, 14, 99, 92, -55, -111, 90, 118, 30, 101, -127, -122, -112, 83, -82, 36, -126, 15, 49, 112, -28, -79, 40, -23, -127, -107, -117, -74, 81, -84, -33, 74, 59, -28, -61, -108, -62, -24, -87, -67, -83, -120, 92, 7, -76, 38, -5, -48, 105, 70, 85, -67, -82, 7, -24, -60, 41, 120, -120, -5, 17, 76, -4, 7, -72, -2, -94, -96, -64, -105, 2, -80, 108, -85, 85, 25, -86, -7, -81, -9, 70, 76, -27, 115, -105, 84, -17, -51, -111, -81, 16, -40, 44, -119, -63, 62, 97, 122, -105, 49, -24, 87, -113, -91, 72, 39, 80, 75, 30, -40, -55, -36, 115, 98, -36, 24, 44, -100, 49, 11, 18, -56, -10, 99, 47, -57, -37, 21, -92, 18, 86, -69, 56, -18, -114, 26, 94, 42, -118, 28, -125, -110, 125, 18, -57, -23, 19, 6, -3, 12, 62, -99, 93, -13, -110, 78, -120, -70, 90, -125, 40, -54, 18, 69, 89, -126, -108, -59, -99, -47, 85, -30, -106, 91, -76, -65, 0, -91, -69, -78, -46, 44, 86, -43, -44, 108, -62, 113, 85, -69, -82, 101, 117, -30, 57, 38, -98, -65, 62, 41, 30, 116, -110, 29, 104, -51, -53, -102, -120, 101, 0, 70, 87, 35, 1, 120, -107, -70, -20, 124, -31, 50, 60, 54, -1, -124, -116, 83, 7, 84, -98, -25, -88, 61, -69, -28, -91, -116, 69, -72, 47, 66, -126, 57, 83, 101, -117, -109, 31, 53, 58, 87, 91, 71, -84, 100, 47, -117, -99, -18, -83, 69, -118, 92, -73, 95, -22, -14, 69, 4, -71, -91, 66, -81, -17, -101, -65, -73, 100, 23, 125, -106, 95, 126, -21, -19, 117, 118, -73, -70, -35, 110, -95, 20, 29, 60, -16, -32, 20, -105, -126, -30, 83, -93, -90, -94, -64, 13, 53, 59, -32, 40, 58, -61, -108, -119, 113, 72, 35, 71, 118, -15, -18, -24, -47, -27, -51, -39, -18, -93, 14, -70, 98, -25, -90, -37, 27, -25, -97, -48, -104, -35, -35, 90, 7, -110, -105, -86, 18, 73, 78, 10, -110, -93, 74, 53, 2, 82, -8, -115, -102, -14, -60, 80, 94, -63, -67, 123, 74, -74, 122, 20, -90, 52, 121, 22, 32, 86, 4, -63, 106, -32, 14, 11, 67, 105, 81, 35, 117, 40, -11, -26, 27, -101, 108, -18, -46, -36, 86, 68, -36, -17, 13, 38, -37, 2, -8, 42, 94, 118, 56, -116, -29, -84, -6, 122, -82, -6, 61, -5, 50, 109, -11, 125, 91, -87, 86, 26, -114, -124, 53, 105, -103, -30, -119, -87, 29, 89, 98, -74, -90, -46, 37, -8, -44, 95, -95, 58, 67, -118, 126, -112, 51, -120, -77, 44, 14, -9, 55, -70, -55, -121, 3, 89, -75, 85, 121, 83, -79, -65, -8, 0, -39, -30, -121, 12, -11, 123, -124, 11, -34, 68, 47, 95, 41, 84, -5, 47, 52, -82, 102, 102, 104, 70, 92, 77, 79, 102, -113, 38, 90, -67, -22, 89, 105, -7, 42, -42, -36, -55, -87, -122, 13, -69, 78, -62, -125, 64, -88, -2, -103, 112, -22, -94, 3, -48, 67, -22, -79, 65, 28, 95, -56, 115, 26, -43, 57, -57, 60, 82, 8, -50, 5, -115, 46, -54, 103, -26, -28, -13, 127, -90, 86, -15, -66, -36, 51, -109, 112, -35, -124, 59, 44, 11, -35, 60, -29, 26, -120, -107, -61, -106, 106, -97, -19, 117, -99, 66, -93, 88, -49, -94, -78, 67, 15, -66, 94, -66, 79, -58, 28, 48, 93, 58, 43, -52, -125, -65, -58, -124, 88, -90, 63, 122, -112, -90, -32, -62, -28, 3, 38, -69, -108, 11, 48, 25, -106, -18, -108, -82, 89, 116, -22, 23, -3, -5, -70, 78, -23, 58, 24, -42, -100, 46, -43, 51, 0, 122, 6, 21, 110, -37, 51, -68, 21, -98, -30, -19, 8, -86, 95, -123, 116, -127, -31, 44, -17, 49, 121, 112, 67, -33, 82, 33, -118, 126, -67, 48, -80, -82, -19, 25, -81, -108, -70, -71, 91, 5, -52, 91, -77, 32, 46, -74, -28, -86, 91, -1, -71, -12, 80, 85, -69, -13, 74, 2, -72, -74, 47, -95, 41, 114, 115, 71, 20, -76, 91, -9, 2, 57, 79, 68, 52, -15, -16, 1, 0, -20, 11, -11, -3, -54, 48, -35, -94, 59, -89, 26, -54, -75, 29, 50, 77, 57, -93, 113, 44, -78, -91, 58, 102, -32, 54, 119, -83, 122, -88, -93, -86, 53, 75, -61, -68, -8, 114, -51, 20, -77, -43, 56, -59, -104, -55, -87, -87, 106, 111, -93, 84, -45, 45, -35, -12, 34, 37, -83, -66, -103, 39, 15, 37, -34, 75, -66, -97, 51, -5, 108, -50, 92, -43, 78, -98, 113, -116, -12, 117, -34, -59, 3, -104, 12, -2, 23, -4, 123, 77, -23, 69, -74, 97, -45, 59, -116, -41, 126, -102, -96, 98, -112, 106, 22, -20, 99, 72, -69, 25, -97, 27, 119, 51, 92, 87, 121, 4, -109, -14, 76, -43, -17, 32, -87, 86, 81, 49, 4, 50, 74, -85, -62, 16, -13, -77, -12, 56, 69, 83, -9, 118, -116, -80, 109, -107, 77, -44, -58, -1, -102, -111, 14, -28, 61, 44, -45, -39, -61, 38, -41, 95, -49, 114, -19, -28, 81, 63, -119, -71, -32, 0, -90, 116, -28, 23, -31, -28, 27, -29, 102, 22, -85, -89, -17, 115, -7, -26, -57, -117, -56, 11, 114, 105, -107, -85, 99, 59, 79, 76, -123, -37, 97, 123, -23, -27, 51, 87, -1, -31, 49, 115, -100, 53, -103, 112, 120, -60, 51, 46, -105, -110, -51, 121, 126, -121, 122, 106, 83, -72, 60, -52, -28, -60, -6, -88, 49, 46, 67, 87, -46, -105, 24, -19, 63, 60, 118, -14, -82, 82, -85, -1, 51, 27, -96, -79, 43, -56, -79, -13, 127, -81, 19, -52, -14, -91, -41, -90, 23, 93, -25, -53, -29, -117, -77, -11, -105, 101, -25, -53, 72, 83, -38, 3, -75, 121, -94, -66, -112, 92, -36, -106, -49, -85, 103, 5, 87, 106, 89, -117, -104, 126, -111, -14, 107, 86, 12, -75, -62, -55, 84, -67, -103, -36, -72, -64, 126, 98, -78, -55, 67, 44, 121, -128, -114, -35, 54, -92, -65, 62, 33, 63, -79, 17, 10, -1, 1, -40, -35, 1, -111, 101, -44, -91, 10, -23, 37, -13, -65, -102, -15, 114, -12, -50, -127, -38, -113, -22, -86, -66, -7, -114, -81, 6, -93, 123, 2, 95, 11, 8, -107, 125, 8, -83, 67, 21, 93, -87, 30, 108, 122, 71, 47, -87, 74, -75, -6, 19, 30, -7, -15, -60, 125, -9, -65, 115, 124, -75, -26, -73, -33, -120, 9, -12, -71, -109, 20, -40, -95, 109, -101, -6, -54, -75, -24, -48, 119, -12, -125, 59, -118, -29, 81, -64, 104, -62, -107, 92, 98, 26, -54, -66, -24, -68, 123, -113, 96, 58, 27, 110, -49, -19, -23, 31, 110, -56, 35, -9, 29, -24, -16, -61, 127, 119, 116, -96, -57, 94, 61, 52, 95, 87, 106, -32, 23, -59, 74, 61, -22, -115, 89, 103, 119, 99, -17, -47, -34, -93, -18, 78, 111, 107, 119, -64, -74, -69, -101, -69, -37, -101, -37, 91, -61, -99, -18, -50, -26, -96, -69, -41, -35, -14, 118, -4, 71, 91, 91, -125, 61, -26, -10, 54, 55, -96, -40, 78, 111, 115, 71, 53, 92, 52, -74, 114, 3, 49, -128, 115, -38, -61, 60, -110, -18, 101, -101, 124, 67, 86, -55, 71, -87, 90, -66, 105, 27, -86, -84, -70, 56, 125, 79, -53, 82, -85, 31, -127, -107, -66, 113, -111, 4, -89, 44, -53, -109, -10, 71, -51, -103, 25, 15, 25, -40, -94, -5, 48, -4, -16, -127, -60, -85, -43, 3, 25, 120, 106, 117, 58, 68, -116, -29, 9, 40, -98, -77, 49, 23, -33, -79, -120, -124, 49, -34, 43, 7, 26, 8, -49, 0, 17, -12, -38, -96, 24, 31, -74, -11, -32, -128, 99, 37, -75, -127, 59, -90, 98, 12, 56, -95, 20, 92, -86, -121, -117, -44, -102, -62, 57, 110, -10, 61, -57, 92, 114, 68, -20, 7, -63, -27, 57, -113, 50, -128, 13, -36, 118, 46, 97, -97, -37, 100, -115, 52, 65, 115, 69, 62, 16, 25, 30, -49, 109, -9, 86, 15, -92, -65, -2, 77, -69, 1, -18, -86, 43, -31, -76, 109, -60, -36, -106, 61, -71, 90, 105, -55, -13, 124, -48, 29, -80, -83, -104, 79, 126, -7, 47, 30, -26, 41, 37, -35, 93, 103, -93, -117, -127, -92, 45, -7, 0, -6, 5, -101, 14, 98, 60, -108, 3, 26, 15, 111, 28, 31, -56, -119, -67, -58, -19, 85, -6, 66, 113, -96, 98, 65, 95, 57, -121, -22, 62, 3, 73, -120, 74, 112, -63, -121, -11, -96, -77, 71, 100, -113, 60, 124, 72, -66, -2, 70, 39, 43, -93, 110, -43, 85, -57, 40, -37, -74, 91, -69, -80, -122, 4, -36, 94, 117, -15, 54, -13, -52, -112, 17, -69, 107, -43, 75, 89, -85, -82, 8, -72, -49, 94, 39, 109, 107, 72, -63, -104, -125, -34, 118, 58, -78, 44, 13, 88, -102, -75, -65, 1, -95, 0, -39, -21, 0, 31, -53, -121, 75, -38, -77, -83, 123, 1, 80, -81, -67, -86, 115, 87, -95, -2, -84, -114, -72, -86, -91, 32, 103, 40, -66, 120, 9, 67, 79, -76, -81, 69, 48, -110, 74, -4, 105, 68, 67, 14, -45, 96, 48, 69, 70, -125, 46, 85, -61, -47, -128, 1, 3, -39, -88, -80, 99, -99, 59, -66, -57, -128, -19, 17, -48, 23, -71, 97, -43, -59, -69, 33, -38, 54, -9, -27, 0, -106, -60, 87, -103, 67, 96, 15, 0, 111, 98, -64, -90, 115, -10, -31, 120, -77, -120, 15, -57, -14, 46, -6, 34, 48, -127, 2, -28, -48, -128, -113, -94, 125, 15, -41, 6, -46, 3, -94, -113, -101, 57, 89, -100, -104, 72, -59, 75, 85, 75, 29, -42, -35, 68, -86, 33, -100, -74, 61, 19, 67, -74, -41, 12, -58, -21, -92, 20, 66, 80, -113, -64, -117, 2, -46, 112, 97, 61, 23, -21, -28, 3, 88, 51, 102, -12, -80, -97, 48, 20, 66, -10, -47, 126, 80, -126, 88, -77, -119, 43, 3, 18, -82, 50, -48, 13, -43, 100, -9, 116, -106, -36, 80, -26, 122, 83, 47, 96, -118, -93, -75, 21, 97, 26, 7, -105, -33, 103, -19, -126, 81, 36, 77, -43, 102, -79, 63, -38, -100, -85, -31, -104, 102, -85, -80, 95, 32, 49, -96, 1, -20, -106, 43, 41, -45, -42, 57, -85, -21, 122, -21, 91, 4, 100, 55, -59, 106, -75, -42, 72, -81, -46, 15, 41, 46, 101, -39, -66, -122, 57, -61, -1, 53, 104, 93, -115, -49, 85, 5, 10, -30, -122, 101, 12, 78, -20, 125, 9, -76, 74, 54, 9, -56, 21, 48, -16, 109, 96, 38, 32, -35, -117, -88, -35, 3, -43, 87, 25, 77, 104, -76, 96, 69, -33, 63, 65, -90, 106, -37, 37, 45, -82, 106, -32, 116, 122, 21, -30, 15, 121, -42, 0, 82, -9, -61, 64, 78, 89, 8, -42, -44, 28, 112, 93, 74, -80, -20, 76, 105, -26, 54, 66, 92, 39, 24, 26, 55, -71, 6, -127, 43, -83, 109, -38, 117, -126, -51, -42, 85, 85, -81, 10, -43, -92, 56, 20, -75, -110, -59, -46, 52, 78, -83, 26, -17, -124, 98, 4, 36, -76, 78, -29, 20, 38, 90, 121, 99, -111, 124, 83, 122, 66, -15, 66, 35, 34, 43, -20, 19, 75, 99, 2, 22, -111, -120, -127, 81, -64, -49, 104, 99, -59, 53, 100, 123, 87, 55, -80, 70, 44, -8, 95, 53, -23, 12, 72, 95, -59, 93, 117, 100, 70, -81, 20, 33, 1, -87, 89, 68, -125, 106, 41, 66, 12, 95, -128, 114, 41, -6, -14, 59, -43, -117, 84, -7, -43, 97, -80, 79, -49, -114, -49, 94, -97, -18, 19, 123, -103, -47, 32, 106, 56, -54, -127, 48, 83, -65, 28, 10, -12, 31, -101, -12, 59, -110, 22, -3, -51, 19, 64, 85, 41, 25, -73, -40, -32, 97, -49, -112, -72, 85, -53, -43, 74, -26, 19, 16, -74, -78, -123, -61, 94, 51, -56, -42, 57, 13, -67, -18, 69, -35, 67, 39, -67, -46, 61, -4, -71, -72, 123, 69, -18, -89, -21, 30, -78, 40, 54, 91, 116, -47, 32, 92, 118, 17, -89, 121, 114, 66, -45, 56, 23, 44, 64, 94, -57, 126, 5, -104, -6, -61, 36, -112, -3, -78, 30, 120, 58, 27, -113, -111, 91, -46, -78, 34, 69, 17, 55, -98, 4, -90, 58, -38, -117, 70, 92, 48, -72, -78, 79, -16, 110, -65, 117, 2, -19, -100, -94, -111, 40, 53, 47, -18, 34, 76, 82, 118, -119, 106, 35, 3, -106, -84, 84, 64, 94, -37, 127, 67, -84, 106, -92, -55, 86, -79, 41, 2, 70, -13, 101, -118, -63, -31, 49, -113, -28, -66, 111, -37, -60, -91, -84, -11, 37, 106, 72, 7, -91, -84, 66, -34, -82, -101, 118, -91, 125, 116, -102, -32, -72, -20, -109, 71, -96, -113, 77, 6, -40, -81, 60, -110, -42, -91, -55, -35, -84, -28, -126, -103, 29, 7, -63, -113, 44, -3, 81, -34, 62, 32, 59, 106, -14, -64, -41, 8, 5, -108, -17, 21, 41, 65, 12, -93, 85, 47, 4, -3, 125, -86, -106, 19, -10, 109, 69, 10, -69, 4, 46, 31, -36, 124, 1, 96, -10, -79, 14, 36, -101, 28, 32, -91, 53, -109, 107, -31, 35, 60, 20, -51, -16, 52, -13, 64, 21, -125, -99, -70, 95, 41, 94, 34, 67, 102, 83, -97, 48, 113, 1, 108, 4, -103, -14, -70, -59, -11, 5, -7, -89, 33, -70, 120, -117, 10, -99, -47, 65, -64, -78, 69, -71, -81, -28, 45, 11, -90, -78, -18, -56, -107, -46, -86, -26, 63, 40, -5, 92, -58, 17, -25, -8, 80, -19, 29, -104, 103, -60, -105, 84, 30, 127, -74, 20, -100, -94, -44, 61, 47, 126, 50, 94, -84, 12, 33, 80, -12, 85, 30, 100, -100, 96, -103, -71, 33, -52, -58, 41, -109, -75, -25, 71, 81, -42, -62, 44, -95, 7, -78, 90, -10, 126, 44, -25, -57, -78, 50, 20, 117, 105, 51, -125, -4, -24, -70, 65, -98, 17, -7, 55, -67, -34, -34, -34, -6, -93, -73, -115, -7, 70, -28, -33, -20, -19, -52, -105, 41, 100, 90, -13, -61, 23, -87, -104, -48, 39, 2, 115, 68, 30, 100, 81, 87, -40, -38, -24, 12, 115, -17, -94, 26, 47, 49, 43, 55, 42, -42, -128, 53, -98, -92, 116, -62, 82, 91, -5, -35, 79, -64, 17, 111, -37, -24, 121, 107, -85, 61, 101, 89, -98, 70, -86, -47, -46, -102, -110, 107, 19, 106, 66, 126, 37, -61, 39, -91, 20, 73, -45, 65, -62, -62, 104, -123, 35, 35, 23, 77, -104, 24, 12, 100, -127, 83, 83, -34, 110, -120, 117, 44, -64, 97, -91, 108, 29, 29, 3, -7, 16, 80, 1, -121, 56, 58, 46, 50, -67, 80, 113, -111, -17, -29, 75, -78, -71, -114, -31, -64, -51, -37, -31, 40, 117, -126, -116, 45, -24, 104, 14, -9, -49, 69, -106, 86, 108, 111, -68, 53, -72, 109, -87, 50, -106, -62, 24, -78, -26, -85, 52, 117, 109, 65, 65, 104, 93, -106, -118, -36, -127, 80, -75, -20, -46, 112, 38, 109, 86, 117, -63, 17, -119, 23, 79, 0, -97, 6, 72, -43, 8, -45, 118, 17, 74, 81, -111, 20, 84, 15, -32, 12, 113, -1, -56, 94, 83, 48, -76, 19, 35, -3, 37, 4, -46, -96, 1, 49, -39, -79, -22, -27, 77, -39, -70, 6, -108, 38, -9, -83, 85, -32, 103, -45, -127, -117, -107, -32, 13, 90, -80, 73, 127, 53, 76, 101, -41, 106, -53, -26, -103, -85, -43, 34, 43, -38, 49, 110, 41, 113, 51, 62, 114, -109, 64, 40, 105, 60, 43, 54, -64, 125, -105, 114, 95, -35, 121, -14, 84, 94, 82, -115, 123, -7, 79, -44, 46, 41, -95, -67, 1, -15, 62, -89, 41, -109, 5, -113, 100, -7, -74, -47, 34, -93, 20, 29, 1, -27, 70, -107, -91, 92, 92, 73, 105, 99, -94, 6, -32, -15, -44, 11, 22, 2, 112, -70, 27, 6, 70, 89, -80, -124, -47, -46, 114, -72, -108, -46, 90, -87, -60, 24, 116, 124, 17, 52, 22, 31, -128, -44, -113, -124, 4, 114, -115, 30, 35, -102, -110, -117, -12, 8, 18, -18, 24, 26, -69, -60, 11, -120, 47, -95, 118, -84, -8, -65, 64, 81, -90, 41, 53, -31, -128, 52, -115, 70, -78, -95, 89, 60, -119, 65, -12, -10, 42, 67, -54, -91, 18, -53, 38, 125, 112, -77, 78, -119, -43, -64, -86, -110, -40, -66, 78, -128, 54, 63, -102, 69, 28, 11, 79, 14, 96, -76, -43, 2, -98, -76, -48, 91, -26, -98, -91, -62, 90, 22, 42, 27, 72, 54, -4, 8, 41, 38, 114, 108, 21, -13, -90, 10, 111, 16, -46, 76, 70, -87, 82, -57, 48, 52, 44, 4, -10, -101, 39, 15, 83, -22, -108, -71, 40, -16, 48, 126, 79, -40, -112, -126, 61, -43, 46, 81, 6, 42, -65, -2, -23, -27, 108, 80, -61, 2, 31, -106, 89, 101, -87, 66, -35, -43, -39, 65, -76, 45, 69, 10, -53, -44, -29, 62, 6, -109, -91, -2, 107, -9, -70, -122, -122, -10, 3, 124, -31, -122, -86, -101, -7, -116, -30, 91, -77, 81, 13, -95, 19, -100, -32, 69, 69, 109, -123, -55, -75, 85, 0, 52, -112, -84, 93, -106, 81, 60, 82, -98, 38, 40, -54, -115, 57, 6, 50, 107, -4, 86, -89, -107, -68, 119, -20, -81, 35, 24, -108, 58, -61, -51, 20, 13, 36, -85, -120, -112, -119, 18, -115, 55, -115, -101, -33, -40, 125, 117, 99, -38, -78, -60, 50, 61, -69, -98, 84, -90, 84, -99, 80, 43, -123, -7, 35, 55, -46, -55, -37, 86, -12, 118, 33, -14, -30, -103, -36, 12, -3, 99, 64, -89, -32, -124, 29, -1, -8, -126, 120, -79, -49, 8, 21, -45, -56, 27, -125, -102, -121, 41, 40, -104, -70, -123, 69, 79, 49, -10, 87, 44, -83, -87, -117, -58, -75, -5, 0, -45, -84, 92, 126, 66, 45, -95, 91, -124, -30, -82, 72, 61, 12, 23, 86, -9, -77, 84, 119, 82, -87, -19, -45, -25, 52, -31, -106, 89, 94, -64, -122, -122, 60, 21, -39, -87, -124, 119, 86, 111, 19, -60, 86, 55, 40, 30, 79, 33, 15, 35, 97, 101, -45, 111, -70, 111, 13, -104, 58, 8, 61, 80, -33, 67, -25, 48, 60, 8, -22, -31, 49, -61, 87, -105, 64, 19, -116, -42, 103, -54, 42, -75, -116, -100, 101, -52, 25, 52, 34, -44, -19, -7, 21, 43, 98, 38, -98, -40, 40, 81, -11, 80, -112, -26, 33, 80, -118, 71, -77, 17, 69, 77, -109, -71, -24, -111, -100, 92, -14, -31, -112, 99, 88, 91, -127, -97, -111, 68, -116, -40, -102, 118, -113, -120, 45, -31, -65, 82, 120, -109, -113, -41, 112, 82, -55, 35, -72, 118, -44, -56, 73, -106, 70, -49, 82, -93, 84, -24, 3, 24, 83, -80, 14, 126, 79, -83, -43, 27, 89, -73, 100, -16, 43, -62, 64, 45, -110, -78, 127, 106, 25, -31, -121, 97, 91, 117, 18, -6, -41, 39, 78, -81, -71, -105, -10, -102, -94, -38, 76, 63, 27, -108, -117, 41, 87, -109, -84, -71, -98, 89, 69, -71, -37, 81, 100, -119, 122, -85, 102, 25, 82, -54, 42, -32, 72, -33, -44, 94, -49, -56, -24, -64, 122, 107, -49, 88, -78, -112, -40, 96, -57, 94, -61, -125, -72, 69, 65, -78, -44, 114, -12, -108, 124, 39, 69, 87, -83, 16, 21, -38, -67, 79, 92, 22, 14, -104, 95, 33, -95, 97, 98, -43, -73, -126, -123, -95, -70, -83, -42, 98, -43, 116, 12, -65, -51, -12, -10, -96, -44, -23, 11, -85, -82, 19, 91, 87, 95, -70, -126, 108, 1, 106, 92, -83, 20, 106, 15, 67, -74, -49, 30, -29, -72, -82, 20, -60, 50, 105, -48, -49, -38, -118, 55, -111, -21, -13, 106, -114, 86, -2, -32, 55, -88, 110, -108, 94, 104, -37, 29, -36, -33, 17, 49, 47, 43, -9, -21, 70, 44, -21, -80, -24, -4, -11, 127, 117, 0, -92, -5, 78, -40, -43, 21, -99, -113, -22, 100, -33, -77, -57, -54, 80, -5, 104, -36, 80, 80, -10, 47, -4, 125, 98, 111, -20, 117, -9, 118, 55, -63, -117, -38, -36, -36, -40, -34, -23, -39, -21, -86, 60, -47, 33, 124, 89, 86, 35, 3, -86, 27, 48, 83, -5, -87, 121, -92, 11, -56, -30, 18, 77, -4, -25, 74, -15, -114, -102, 12, 13, -126, -51, -98, -104, 82, -79, -78, 96, -61, -92, 103, 71, -110, -80, -46, 27, 6, -36, 115, -82, -73, 2, -124, 44, 27, -57, -120, -73, -84, 104, 43, 91, 27, -71, 106, -65, 0, -123, 105, 87, 21, 18, -104, 85, -119, -43, -113, 87, 106, 85, 12, 76, -17, 2, 71, -67, -76, -40, -116, -94, 100, -28, 9, 99, -39, -75, 8, 22, -91, -50, -44, -70, -98, 41, -26, 5, -79, 96, 34, 51, 10, -36, -100, -85, -80, 107, 51, 51, -58, -41, -91, -68, -21, -3, 4, 49, 76, -63, -19, -58, 13, -52, 92, -99, -54, -112, 45, 125, -117, -43, -114, -64, 109, 51, -51, -82, 89, 15, -13, 52, 48, 41, 72, 4, 98, 101, 19, -39, 67, -12, -96, -28, 69, -74, 71, -37, -72, -42, 55, 102, -24, 44, 29, -95, -81, -93, -99, -105, 1, 77, -59, 81, 20, -93, -123, -95, 25, -74, -13, 31, 100, 12, -91, 2, -71, -17, 6, -97, 63, -72, 100, 4, 95, 75, 1, -42, -52, -40, 40, 6, 39, -13, 63, 58, 114, -93, -1, 55, 51, -53, 89, -64, 56, 72, -115, -124, 102, -29, -29, 52, -91, 83, -96, -58, -20, 62, 9, -52, 67, -46, -71, -14, 94, -42, 54, -79, 59, 54, 65, 127, -56, 72, 59, -98, 19, -9, 95, -126, -127, 20, -68, -44, 85, 112, 23, 70, -57, 94, 43, -128, -66, -23, -67, -107, 108, 33, 37, -14, -33, -1, 6, -35, 57, 95, 7, 84, 4, -59, 21, -73, -9, -19, 110, 117, 117, 20, 111, 57, 62, -57, 109, 9, -25, 66, -98, -124, 100, 106, 126, -69, -46, 93, 111, -63, -65, 109, -75, 121, 71, 41, 65, -123, -68, 94, -51, 40, -43, -100, 90, -47, 34, -81, -24, 5, -109, -101, -113, 120, 52, -108, -105, 94, 37, 99, -18, 9, -36, 121, 66, -43, -34, 19, -7, 70, 11, 26, 54, -118, -24, 69, -99, -54, -66, 93, 10, -26, -55, -128, 12, -30, 15, 80, 35, 98, 98, -82, -118, 10, 4, -23, -123, 112, 7, -54, 66, -47, -126, -125, 80, -1, 58, 88, 79, 118, 53, -89, -63, 115, 89, -23, 36, -58, 43, 45, 68, 91, -9, -86, -20, 6, 72, 2, -1, -107, -127, 79, -25, -30, -93, -114, 25, -40, -112, 109, -78, -79, -43, -83, 106, 112, 61, -116, 38, -84, -6, 105, -79, -59, -122, -81, 8, -50, 68, 43, 13, -37, -116, -82, -35, -44, -12, 78, 116, -64, -90, -10, -29, 84, -97, -41, -64, 17, 99, -66, -101, 92, -116, -4, 114, -49, -44, -20, 62, -87, 126, 105, -109, -106, 106, 89, -67, 82, -119, -85, -56, -6, -116, 94, -97, -76, 49, -82, 97, 108, -43, 68, 26, -87, -85, 101, 85, 58, -52, -44, 67, 57, -91, -31, -118, -37, 95, -92, -107, -117, 54, -85, -108, 8, 89, 73, 122, 111, 87, -123, 105, 104, -102, -116, 35, 13, -5, -123, 108, 15, -96, -4, 36, -73, 69, -107, 115, -96, -100, 25, -59, 66, 3, 84, 114, -73, 50, 65, 11, 11, 14, -25, 56, -36, 48, -44, -58, -6, 92, -18, 70, -128, 63, -121, 26, -108, 94, -122, 63, 32, 107, 107, -68, -78, 16, -115, -118, 75, -6, -2, -86, -44, 27, -2, -42, -27, -66, 52, 70, -52, 124, 45, 29, 126, 53, 95, 91, -25, -72, 43, -21, -36, 90, 69, -117, -81, -80, -128, 74, 124, 37, 32, 85, 71, -59, -107, 52, 17, 0, 42, 100, 68, 108, 66, 126, 57, 115, -107, -55, -33, -42, 21, -42, -51, 18, -65, -30, 39, 80, -13, -67, -115, -35, -82, -83, -73, 106, -24, -21, -72, -19, -99, -115, 34, 73, -42, -61, 121, -52, 0, 80, -55, -86, -91, 127, -127, 98, -37, 39, 31, -119, 77, -13, 44, -58, 36, 123, -97, 0, -77, -53, 19, -30, -96, -8, 4, -4, -36, -128, -97, -96, -99, 65, 77, 15, 82, 21, 83, -79, 101, 60, 88, -102, 56, 40, -42, -70, 74, -116, -10, -101, -50, 98, 17, -58, 117, -33, 9, -16, 22, 116, -54, 4, 65, -40, -5, 118, 6, 48, -124, 50, -15, 109, 114, 101, 98, 61, -46, -47, 86, 86, 36, -86, -115, -52, -60, 54, -11, -96, 66, 113, -62, 125, -11, -38, 19, -13, -55, 96, 90, 104, -39, 115, 80, -23, 5, 73, -93, -126, -104, -13, 3, 112, -80, -112, -16, -58, 74, -113, -42, -74, 87, 111, 28, 4, 85, -27, -53, 29, 3, 101, -39, 92, -55, 56, 123, 85, -63, -112, -54, -25, -122, 61, -115, 95, -83, 84, -73, -83, -108, -74, 2, -46, -98, 30, 45, 112, 73, 45, 93, 123, -11, -32, -85, 21, -71, 39, -31, -24, 122, 63, -78, 40, -113, 126, -28, 87, 43, 20, -67, -41, -78, 74, 57, -109, -126, 10, -113, -67, 56, 88, -77, 58, -70, 47, -48, 46, -3, 117, -54, 70, 35, 105, 48, 36, -14, -36, -102, -54, 17, -99, 110, -73, -41, -21, -20, -19, -18, -19, -127, 42, -4, -42, 90, 123, 5, -77, -87, 59, 12, -30, 24, 120, 3, -104, -32, 9, -96, -37, 94, 69, 116, -80, 115, -19, -43, -50, -93, 109, -36, 104, -39, 93, -107, -19, 75, 63, -4, 8, 109, -64, 3, -22, 54, 83, -26, 96, -80, -48, -73, -91, -21, -125, 85, -80, -57, 122, 8, 75, -110, -40, 80, 126, -2, 76, -18, 13, -44, 95, 81, 54, 35, -34, 51, 15, -52, 43, -1, -4, -10, 27, 121, 35, -99, -19, -38, -27, -13, 48, 72, -57, -98, 23, -25, -22, -14, -7, -41, -57, 78, 111, -85, -69, -35, -35, -35, 118, 30, -31, 109, -13, -77, -91, -27, 85, -11, 24, -65, -59, 61, -29, -78, 0, -108, -88, 91, 54, 38, 34, 0, 54, -48, 50, -111, -121, -111, 34, 19, 90, 46, 51, -99, -80, 101, -90, 36, 40, 10, 41, -110, 84, 2, 31, 81, 29, -93, 80, -17, 31, -120, 125, 27, -75, -22, -30, 65, 39, -33, 18, -37, 88, -119, 66, 4, 54, -40, -24, -107, -121, 19, -64, -119, 90, 35, -74, -34, 89, -20, -48, -120, 6, 83, -36, -29, 47, -39, 2, 31, -67, 19, -10, 65, -47, -91, -59, -45, 74, 99, 92, -125, -120, -123, 3, 61, -94, 96, 82, 74, -14, -126, 25, 5, 127, 75, 17, 51, -29, 123, -13, -106, -31, -33, -73, 99, -72, 77, 44, 125, -114, -43, -83, 93, 13, -78, 31, -5, -66, 69, 106, 22, -96, -68, -4, 78, 23, 54, -58, 95, -35, -18, -85, -93, 93, 57, -3, -118, 91, 14, -51, -71, 122, -116, -88, -95, 109, -126, -121, 97, -97, -80, 65, 62, 2, 31, 41, -50, -16, 28, 32, -56, 15, 113, 72, -41, 5, -23, -39, -36, 4, -127, -37, -38, -35, -38, -35, -63, -51, -43, 120, 84, -10, -1, 3, 17, 93, -28, 11, -33, -73, 0, 0</find>
+      <find>entity</find>
+      <find>User-Agent</find>
+      <find>System</find>
+      <find>System.err</find>
+      <find>System.out.println</find>
+      <find>getBytes</find>
+      <find>i</find>
+      <find>ipv</find>
+      <find>multi</find>
+      <find>ipv4</find>
+      <find>5000</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,28 +236,31 @@
       <list>
         <option value="$PROJECT_DIR$/src/HTTP/Request.java" />
         <option value="$PROJECT_DIR$/src/HTTP/Browser.java" />
-        <option value="$PROJECT_DIR$/src/HTTP/Cookie.java" />
-        <option value="$PROJECT_DIR$/src/HTTP/CookieManager.java" />
-        <option value="$PROJECT_DIR$/src/URL/URL.java" />
         <option value="$PROJECT_DIR$/src/HTTP/Download/DownloadFile.java" />
-        <option value="$PROJECT_DIR$/src/URL/URLParser.java" />
-        <option value="$PROJECT_DIR$/src/HTTP/Response.java" />
-        <option value="$PROJECT_DIR$/src/HTTP/HttpClient.java" />
-        <option value="$PROJECT_DIR$/src/DNS/DNSQuery.java" />
-        <option value="$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java" />
         <option value="$PROJECT_DIR$/src/URL/TSL/TSLSocket.java" />
         <option value="$PROJECT_DIR$/src/URL/TLS/HmacMD.java" />
-        <option value="$PROJECT_DIR$/src/URL/TLS/TLSInputStream.java" />
         <option value="$PROJECT_DIR$/src/URL/TLS/TLSOutputStream.java" />
-        <option value="$PROJECT_DIR$/src/test/Test.java" />
-        <option value="$PROJECT_DIR$/src/URL/TLS/TLSSocket.java" />
-        <option value="$PROJECT_DIR$/src/URL/TLS/HandShake.java" />
-        <option value="$PROJECT_DIR$/src/URL/TLS/Record.java" />
-        <option value="$PROJECT_DIR$/src/URL/TLS/HMAC.java" />
         <option value="$PROJECT_DIR$/src/URL/TLS/HMacMD.java" />
-        <option value="$PROJECT_DIR$/src/URL/TLS/Encryption/PRF.java" />
-        <option value="$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/bytes" />
+        <option value="$PROJECT_DIR$/src/DNS/DNSQuery.java" />
+        <option value="$PROJECT_DIR$/src/URL/URL.java" />
+        <option value="$PROJECT_DIR$/src/URL/URLParser.java" />
+        <option value="$PROJECT_DIR$/src/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/HTTP/Cookie.java" />
+        <option value="$PROJECT_DIR$/src/HTTP/CookieManager.java" />
+        <option value="$PROJECT_DIR$/src/LabGet.java" />
+        <option value="$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java" />
+        <option value="$PROJECT_DIR$/src/URL/TLS/Encryption/PseudoRandom.java" />
+        <option value="$PROJECT_DIR$/src/URL/TLS/TLSSocket.java" />
+        <option value="$PROJECT_DIR$/src/URL/TLS/Record.java" />
+        <option value="$PROJECT_DIR$/src/URL/TLS/TLSInputStream.java" />
+        <option value="$PROJECT_DIR$/src/URL/TLS/HandShake.java" />
+        <option value="$PROJECT_DIR$/src/URL/TLS/HMAC.java" />
+        <option value="$PROJECT_DIR$/src/URL/TLS/Encryption/PRF.java" />
+        <option value="$PROJECT_DIR$/src/HTTP/Response.java" />
+        <option value="$PROJECT_DIR$/src/HTTP/HttpClient.java" />
+        <option value="$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java" />
       </list>
     </option>
   </component>
@@ -223,6 +293,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -245,14 +317,84 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="URL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTTP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Download" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="network-pj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,8 +405,8 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="last.edited.regexp" value="http://" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="project.structure.last.edited" value="Facets" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TLS/TLS" />
     <property name="ignore_missing_gitignore" value="true" />
@@ -275,7 +417,7 @@
       <recent name="HTTP" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.LabGet">
     <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -284,9 +426,9 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="test.Test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="http://pj-test.htcnet.moe:8033/test_url_parsing?data1=}don'tforgeturlencode{&amp;data2=345%" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -676,8 +818,24 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+    <configuration default="false" name="LabGet" type="Application" factoryName="Application" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="LabGet" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="https://www.berkeley.edu/" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="network" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.LabGet" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -698,7 +856,9 @@
       <workItem from="1480606739585" duration="115128000" />
       <workItem from="1481343318341" duration="32466000" />
       <workItem from="1481427318246" duration="213000" />
-      <workItem from="1481427548733" duration="53000" />
+      <workItem from="1481427548733" duration="3131000" />
+      <workItem from="1482074324659" duration="8000" />
+      <workItem from="1482395172705" duration="86227000" />
     </task>
     <task id="LOCAL-00001" summary="init commit&#10;">
       <created>1480862313022</created>
@@ -763,45 +923,52 @@
       <option name="project" value="LOCAL" />
       <updated>1481426967268</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="TLS init&#10;">
+      <created>1481427605576</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1481427605576</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147860000" />
+    <option name="totallyTimeSpent" value="237173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30972517" sideWeight="0.45416668" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3181818" sideWeight="0.56666666" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.66510415" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.43333334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3181818" sideWeight="0.33489582" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.44583333" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.38333333" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30972517" sideWeight="0.47708333" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -818,7 +985,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="70" />
+      <option name="time" value="195" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -827,42 +994,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/URL/TLS/HMAC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/URL/TLS/TLSOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/URL/TLS/TLSInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/util/regex/Matcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="494" column="18" lean-forward="false" selection-start-line="494" selection-start-column="18" selection-end-line="494" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/net/URL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15705">
@@ -905,27 +1036,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTP/Browser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="140" column="27" lean-forward="false" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTP/Cookie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="958">
-          <caret line="58" column="29" lean-forward="false" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/io/RandomAccessFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -940,30 +1050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTP/CookieManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/URL/URLParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTP/Download/DownloadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/io/FilterInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -971,83 +1057,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/util/zip/GZIPInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/util/zip/InflaterInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="652">
           <caret line="163" column="0" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/io/InputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="80" column="19" lean-forward="false" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/URL/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="95" column="28" lean-forward="false" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/PseudoRandom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DNS/DNSQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="39" column="67" lean-forward="false" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTP/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="144" column="30" lean-forward="false" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/URL/TLS/TLSOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/URL/TLS/TLSInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/net/Socket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="953" column="42" lean-forward="false" selection-start-line="953" selection-start-column="42" selection-end-line="953" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1079,21 +1092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTTP/HttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/jre/lib/jce.jar!/javax/crypto/Cipher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="93" column="22" lean-forward="false" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/util/Random.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -1108,44 +1106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/io/OutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/URL/TLS/TLSSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2907#2908#0" expanded="true" />
-            <element signature="e#2945#2946#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/URL/TLS/HMAC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="54" lean-forward="false" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/URL/TLS/Record.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2413">
-          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#11404#11405#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/io/ByteArrayOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -1153,27 +1113,261 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/PRF.java">
+    <entry file="file://$PROJECT_DIR$/src/.gitignore" />
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/util/zip/GZIPInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="55" column="62" lean-forward="false" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
+        <state relative-caret-position="205">
+          <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bytes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2894">
+          <caret line="0" column="4115" lean-forward="false" selection-start-line="0" selection-start-column="4115" selection-end-line="0" selection-end-column="4115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/net/Socket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6122">
+          <caret line="82" column="11" lean-forward="false" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="11" />
+          <folding>
+            <element signature="e#1829#1830#0" expanded="false" />
+            <element signature="e#1854#1855#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/io/InputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/io/OutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="21" column="62" lean-forward="false" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DNS/DNSQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="224" column="15" lean-forward="false" selection-start-line="224" selection-start-column="11" selection-end-line="224" selection-end-column="15" />
+          <folding>
+            <element signature="e#8623#8624#0" expanded="true" />
+            <element signature="e#8652#8653#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/URL/URLParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="94" column="35" lean-forward="false" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/text/DateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="352" column="18" lean-forward="false" selection-start-line="352" selection-start-column="18" selection-end-line="352" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTP/Browser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTP/Cookie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="922">
+          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTP/CookieManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="695" column="29" lean-forward="false" selection-start-line="695" selection-start-column="29" selection-end-line="695" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/jre/lib/jce.jar!/javax/crypto/Cipher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="785" column="21" lean-forward="false" selection-start-line="785" selection-start-column="21" selection-end-line="785" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/Encryptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTP/Download/DownloadFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/URL/URL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="114" column="30" lean-forward="false" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="30" />
+          <folding>
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1794#1795#0" expanded="true" />
+            <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="e#2004#2005#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
+            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="e#2110#2111#0" expanded="true" />
+            <element signature="e#2140#2141#0" expanded="true" />
+            <element signature="e#2176#2177#0" expanded="true" />
+            <element signature="e#2203#2204#0" expanded="true" />
+            <element signature="e#2263#2264#0" expanded="true" />
+            <element signature="e#2305#2306#0" expanded="true" />
+            <element signature="e#2339#2340#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/URL/TLS/TLSSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="76" column="19" lean-forward="false" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
+          <folding>
+            <element signature="e#2829#2830#0" expanded="true" />
+            <element signature="e#2866#2867#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/URL/TLS/TLSInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/PseudoRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/security/MessageDigest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="329" column="61" lean-forward="true" selection-start-line="329" selection-start-column="7" selection-end-line="329" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/URL/TLS/Record.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="88" column="26" lean-forward="false" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+          <folding>
+            <element signature="e#11313#11314#0" expanded="true" />
+            <element signature="e#11349#11350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_65/src.zip!/java/io/ByteArrayInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="175" column="47" lean-forward="true" selection-start-line="175" selection-start-column="47" selection-end-line="175" selection-end-column="47" />
+        <state relative-caret-position="205">
+          <caret line="102" column="11" lean-forward="false" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/URL/TLS/HandShake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3477">
-          <caret line="197" column="41" lean-forward="false" selection-start-line="197" selection-start-column="41" selection-end-line="197" selection-end-column="41" />
+        <state relative-caret-position="481">
+          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/PRF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/URL/TLS/HMAC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LabGet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="66" lean-forward="true" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1182,27 +1376,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/URL/TLS/Encryption/RSA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" column="52" lean-forward="false" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/src/test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+        <state relative-caret-position="95">
+          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/URL/TLS/TLSOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="380">
+          <caret line="24" column="62" lean-forward="false" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTP/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1558">
+          <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding>
+            <element signature="e#3204#3205#0" expanded="true" />
+            <element signature="e#3233#3234#0" expanded="true" />
+            <element signature="e#3344#3345#0" expanded="true" />
+            <element signature="e#3371#3372#0" expanded="true" />
+            <element signature="e#3411#3412#0" expanded="true" />
+            <element signature="e#3438#3439#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTP/HttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="305" column="26" lean-forward="false" selection-start-line="305" selection-start-column="26" selection-end-line="305" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTTP/Download/MultiThreadsDownload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="112" column="36" lean-forward="true" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1213,10 +1427,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>LabGet:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

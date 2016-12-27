@@ -3,6 +3,7 @@ package URL.TLS;
 import javax.crypto.ShortBufferException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 
 /**
  * Created by Administrator on 2016/12/8.
@@ -18,11 +19,12 @@ public class TLSInputStream extends InputStream {
     }
     @Override
     public int read() throws IOException {
-        int len = read(buffer, start, 1);
+        byte[] buf = {0};
+        int len = read(buf, 0, 1);
         if (len == -1) {
             return -1;
         }
-        return 0;
+        return buf[0];
     }
     public int read(byte[] buf, int offset, int len) throws IOException {
         try {
@@ -45,19 +47,19 @@ public class TLSInputStream extends InputStream {
         if (available == 0) {
             return -1;
         }
-        int readLength = available < len ? available : len;
+        int readLength = Math.min(available, len);
         System.arraycopy(buffer, start, buf, offset, readLength);
         start += readLength;
         available -= readLength;
         return readLength;
     }
-    public void addBytes(byte[] fragment) {
+
+    void addBytes(byte[] fragment) {
         if (available + fragment.length > buffer.length) {
             byte[] temp = new byte[buffer.length + (fragment.length << 1)];
             System.arraycopy(buffer, start, temp, 0, available);
             buffer = temp;
         }
-
         if (end + fragment.length > buffer.length) {
             byte[] temp = new byte[buffer.length];
             System.arraycopy(buffer, start, temp, 0, available);

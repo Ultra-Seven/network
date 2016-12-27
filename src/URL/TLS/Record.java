@@ -41,8 +41,8 @@ public class Record {
     private int readBufOffset;
 
     //input and output stream
-    OutputStream outputStream;
-    InputStream inputStream;
+    private OutputStream outputStream;
+    private InputStream inputStream;
 
     public Record(TLSSocket tlsSocket) {
         this.tlsSocket = tlsSocket;
@@ -80,12 +80,10 @@ public class Record {
             messageLength -= sendingLength;
         }
     }
-    /*
-     * read from a record. if the record is too large, return a single segment.
-     * if invalid, return null
-     */
+
+     //read message from a record. if the record is too large, return a segment.
     public byte[] readFromRecord() throws IOException, ShortBufferException {
-        int recordLength = 0;
+        int recordLength;
         // read header with the size of 5 bytes
         while (readBufOffset < 5) {
             int len = inputStream.read(readBuf, readBufOffset, 5 - readBufOffset);
@@ -125,12 +123,6 @@ public class Record {
             }
             byte[] sequenceNumber = longToByte(serverNum++);
             byte[] mac = getMAC(serverMAC, sequenceNumber, readBuf[0], fragment, 0, fragmentLength);
-            //check MAC
-            for (int i = 0; i < mac.length; i++) {
-                if (fragment[fragmentLength + i] != mac[i])
-                    System.out.println("Wrong MAC");
-            }
-            System.out.println("MAC valid!");
             byte[] fragmentWithoutMAC = new byte[fragmentLength];
             System.arraycopy(fragment, 0, fragmentWithoutMAC, 0, fragmentLength);
             fragment = fragmentWithoutMAC;
@@ -182,7 +174,6 @@ public class Record {
         plainTxt[11] = (byte) (length >> 8);
         plainTxt[12] = (byte) (length);
         System.arraycopy(message, offset, plainTxt, 13, length);
-
         //MAC digest
         return hMacMD.digest(plainTxt);
     }

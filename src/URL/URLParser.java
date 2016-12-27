@@ -38,9 +38,9 @@ public class URLParser {
         //System.out.println("Path:" + this.url.getPath());
         //set parameters
         this.url.setParameters(getParameter());
-        this.url.getParameters().entrySet().forEach(stringListEntry -> {
-            System.out.println("Key:" + stringListEntry.getKey() + "\t\tValue:" + stringListEntry.getValue().get(0));
-        });
+//        this.url.getParameters().entrySet().forEach(stringListEntry -> {
+//            System.out.println("Key:" + stringListEntry.getKey() + "\t\tValue:" + stringListEntry.getValue());
+//        });
         //set fragment
         this.url.setFragment(getFragment());
         //System.out.println("Fragment:" + this.url.getFragment());
@@ -50,7 +50,7 @@ public class URLParser {
         return getMatchedString("(?:(ssh|ftp|https?)://)");
     }
     private String getHostName() {
-        return getMatchedString("(?:[a-z0-9](?:[-a-z0-9]*[a-z0-9])?\\.)+(?:com|edu|gov|net|org|biz|in(?:t|fo)|(?:[a-z]{2}))");
+        return getMatchedString("(?:[a-z0-9](?:[-a-z0-9]*[a-z0-9])?\\.)+(?:com|edu|gov|net|org|biz|in(?:t|fo)|(?:[a-z]+))");
     }
     private String getIP() {
         return getMatchedString("^(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[0-9]{1,2})(\\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[0-9]{1,2})){3}$");
@@ -71,23 +71,42 @@ public class URLParser {
         }
         return path;
     }
-    private HashMap<String, List<String>> getParameter() {
-        HashMap<String, List<String>> list = new HashMap<>();
+    private HashMap<String, String> getParameter() {
+        HashMap<String, String> list = new HashMap<>();
         if (rawUrl.length() > 0 && rawUrl.charAt(0) == '?') {
             rawUrl = rawUrl.substring(1);
-            Pattern pattern = Pattern.compile("(((\\w*%)*(\\w*\\?)*(\\w*:)*(\\w*\\+)*(\\w*\\.)*(\\w*&)*(\\w*-)*(\\w*=)*(\\w*%)*(\\w*\\?)*(\\w*:)*(\\w*\\+)*(\\w*\\.)*(\\w*&)*(\\w*-)*(\\w*=)*)*(\\w*)*)");
-            Matcher matcher = pattern.matcher(rawUrl);
-            if (matcher.find()) {
-                String match = matcher.group();
-                String[] query = match.split("&");
-                for (String aQuery : query) {
-                    String[] parameters = aQuery.split("=");
-                    List<String> value = new ArrayList<>();
-                    value.addAll(Arrays.asList(parameters).subList(1, parameters.length));
-                    list.putIfAbsent(parameters[0], value);
+            String[] keyValue = rawUrl.split("&");
+            int last = 0;
+            for (int i = 0; i < keyValue.length; i++) {
+                String[] pair = keyValue[i].split("=");
+                if (pair.length == 2) {
+                    String key = pair[0];
+                    String value = pair[1];
+                    if (i == keyValue.length - 1) {
+                        int index = value.indexOf('#');
+                        value = (index == -1) ? value : value.substring(0, index);
+                    }
+                    last += key.length() + value.length() + 1;
+                    list.put(key, value);
+
                 }
-                rawUrl = rawUrl.replace(match, "");
             }
+            String query = rawUrl.substring(0, last + 1);
+            this.url.setQuery(query);
+            rawUrl = rawUrl.substring(last + 1);
+//            Pattern pattern = Pattern.compile("(((\\w*%)*(\\w*\\?)*(\\w*:)*(\\w*\\+)*(\\w*\\.)*(\\w*&)*(\\w*-)*(\\w*=)*(\\w*%)*(\\w*\\?)*(\\w*:)*(\\w*\\+)*(\\w*\\.)*(\\w*&)*(\\w*-)*(\\w*=)*)*(\\w*)*)");
+//            Matcher matcher = pattern.matcher(rawUrl);
+//            if (matcher.find()) {
+//                String match = matcher.group();
+//                String[] query = match.split("&");
+//                for (String aQuery : query) {
+//                    String[] parameters = aQuery.split("=");
+//                    List<String> value = new ArrayList<>();
+//                    value.addAll(Arrays.asList(parameters).subList(1, parameters.length));
+//                    list.putIfAbsent(parameters[0], value);
+//                }
+//                rawUrl = rawUrl.replace(match, "");
+//            }
         }
         return list;
     }

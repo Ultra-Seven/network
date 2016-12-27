@@ -1,13 +1,16 @@
 package HTTP;
 
+import DNS.DNSQuery;
 import HTTP.Download.DownloadFile;
 import HTTP.Download.MultiThreadsDownload;
+import URL.TLS.TLSSocket;
 import URL.URL;
 
 import java.io.*;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
+import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.util.Arrays;
 import java.util.zip.GZIPInputStream;
@@ -20,143 +23,240 @@ import URL.URLParser;
 public class HttpClient {
     private static final int MAX_LINE_LENGTH = 65536;
     private static final int MAX_CHUNKS = 10;
-    private static final int BUFFER_SIZE = 1 << 10;
+    private static final int BUFFER_SIZE = 1 << 11;
     private byte[] readByte = new byte[MAX_LINE_LENGTH];
     private Socket socket;
     private URL url;
     private Response response;
     private boolean multiThread = true;
-    public HttpClient(URL url) throws IOException {
+    private MultiThreadsDownload down;
+    private boolean connect = true;
+    public HttpClient(URL url) throws IOException, NoSuchAlgorithmException {
         this.multiThread = false;
         this.url = url;
-        socket = new Socket();
-        sendRequestGet("");
-    }
-    public HttpClient(URL url, String addString, boolean multiThread) throws IOException {
-        this.multiThread = multiThread;
-        if (addString != null) {
-            this.url = url;
-            socket = new Socket();
-            sendRequestGet(addString);
+        DNSQuery dnsQuery = new DNSQuery(url.getHost(), "202.120.224.26");
+        this.url.setIps(dnsQuery.getIpList());
+        if (this.url.getIps().size() == 0 || this.url.getPort() == 0)
+            throw new IOException();
+        if ("https://".equals(url.getProtocol())) {
+            socket = new TLSSocket(url.getHost(), 443);
         }
         else {
-            System.out.println("Wrong added string");
+            socket = new Socket();
+            SocketAddress socketAddress = new InetSocketAddress(dnsQuery.getIp(), url.getPort());
+            socket.connect(socketAddress, 5000);
         }
     }
-    private void sendRequestGet(String addString) throws IOException {
+    public HttpClient(URL url, Socket socket) throws IOException {
+        this.multiThread = false;
+        this.url = url;
+        this.socket = socket;
+    }
+    public HttpClient(URL url, String addString, boolean multiThread) throws IOException, NoSuchAlgorithmException {
+        if (addString != null) {
+            this.multiThread = multiThread;
+            this.url = url;
+            if (this.url.getIps().size() == 0 || this.url.getPort() == 0)
+                throw new IOException();
+            if ("https://".equals(url.getProtocol())) {
+                socket = new TLSSocket(url.getHost(), 443);
+            }
+            else {
+                socket = new Socket();
+                SocketAddress socketAddress = new InetSocketAddress(url.getIps().get(0), url.getPort());
+                socket.connect(socketAddress, 5000);
+            }
+            sendRequestGet(addString);
+        }
+        else
+            throw new IOException("wrong add strings");
+    }
+
+    public void sendRequestGet(String addString) throws IOException {
         String path = url.getPath();
-        String host = url.getHost();
-        int port = url.getPort();
-        SocketAddress socketAddress = new InetSocketAddress(host, port);
-        socket.connect(socketAddress);
-        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
-        BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
         String request = "";
+        //query parameter
+        if (url.getQuery() != null)
+            path += ("?" + url.getQuery());
+//        path += url.getFragment();
         //request line
         request = request + "GET " + path + " HTTP/1.1\r\n";
         //header line
         request = request + getRequestString(addString);
 
         request = request + "\r\n";
-        System.out.println(request);
-        bufferedWriter.write(request);
-        bufferedWriter.flush();
+        System.err.print(request);
 
-        response = new Response();
-        parseResponse(socket.getInputStream(), response);
+        if ("https://".equals(url.getProtocol())) {
+            TLSSocket tlsSocket = null;
+            try {
+                tlsSocket = new TLSSocket(url.getHost(), 443);
+                this.socket = tlsSocket;
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            }
+            tlsSocket.getTlsOutputStream().write(request.getBytes());
+            InputStream inputStream = tlsSocket.getTlsInputStream();
+            response = new Response();
+            parseResponse(inputStream, response);
+//            System.out.println(Arrays.toString(response.getBytes()));
+            if (!multiThread && connect) {
+                if (down != null) {
+                    try {
+                        down.join();
+                    } catch (InterruptedException ignored) {
 
+                    }
+                }
+                String utf8 = new String(response.getBytes(), "UTF-8");
+                while (utf8.charAt(0) == '\n') {
+                    utf8 = utf8.substring(1);
+                }
+                System.out.print(utf8);
+            }
+        }
+        else {
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
+            BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+            bufferedWriter.write(request);
+            bufferedWriter.flush();
+            response = new Response();
+            parseResponse(socket.getInputStream(), response);
 
-        //close
-        bufferedWriter.close();
+            //close
+            bufferedWriter.close();
+//            System.out.println(Arrays.toString(readByte));
+            if (!multiThread && connect) {
+                if (down != null) {
+                    try {
+                        down.join();
+                    } catch (InterruptedException ignored) {
+                    }
+                }
+                String utf8 = new String(response.getBytes(), "UTF-8");
+                System.out.print(utf8);
+            }
+        }
         socket.close();
     }
     private void parseResponse(InputStream inputStream, Response response) throws IOException {
         String line;
         String statusLine = readLine(inputStream);
+        String header = "" +statusLine + "\r\n";
+//        System.out.println(statusLine);
         String[] lines = statusLine.split(" ");
-        //set protocol version
-        response.setVersion(lines[0]);
-        //set status code
-        response.setStatusCode(Integer.parseInt(lines[1]));
-        //set expression
-        String expression = "";
-        for (int i = 2; i < lines.length; i++) {
-            expression = (i == lines.length - 1) ? lines[i] : lines[i] + " ";
-        }
-        response.setExpression(expression);
-
-        while(true) {
-            line = readLine(inputStream);
-            if(line != null) {
-                if(line.indexOf(':') == -1) {
-                    throw new IOException("Invalid HTTP response header: " + line);
-                }
-                parseHeadLine(line, response);
+        if (lines.length >= 3) {
+            //set protocol version
+            response.setVersion(lines[0]);
+            //set status code
+            response.setStatusCode(Integer.parseInt(lines[1]));
+            //set expression
+            String expression = "";
+            for (int i = 2; i < lines.length; i++) {
+                expression = (i == lines.length - 1) ? lines[i] : lines[i] + " ";
             }
-            else
-                break;
-        }
-        int threshold = 1000;//10 * (1 << 20);
-        long length = response.getContentLength();
-        if(length == 0) { // we're done here
-            System.out.println("The content length is zero!");
-        }
-        else if (length > threshold) {
-            String path = url.getPath();
-            String fileName = url.getHost() + "_" + path.substring(path.lastIndexOf("/") + 1) + ".temp";
-            int split = (int) (length / threshold) + 1;//(int) (length / MAX_LINE_LENGTH);
-            DownloadFile downloadFile = new DownloadFile(url.getUrl(), fileName, split, length);
-            MultiThreadsDownload down = new MultiThreadsDownload(downloadFile, response);
-            new Thread(down).start();
-            System.out.println("The content length is too large. Multiple threads are running!");
-        }
-        else {
-            OutputStream outputStream = new ByteArrayOutputStream();
-            long index;
-            if ("chunked".equals(response.getTransferCoding())) {
-                index = length = 0;
-                int hex;
-                String strHex;
-                do {
-                    strHex = readLine(inputStream).trim();
-                    hex = Integer.parseInt(strHex, 16);
-                    length += readEntity(inputStream, outputStream, hex);
-                    if (hex > 0) {
-                        readLine(inputStream); // there's a blank line before the content
+            response.setExpression(expression);
+            response.setHeader(statusLine);
+            //check status
+            if (lines[1].charAt(0) == '4' || lines[1].charAt(0) == '5') {
+                throw new IOException("invalid status");
+            }
+            while (true) {
+                line = readLine(inputStream);
+                if (line != null) {
+//                    System.out.println(line);
+                    header += line + "\r\n";
+                    if (line.indexOf(':') == -1) {
+                        throw new IOException("Invalid HTTP response header: " + line);
                     }
-
-                } while (hex > 0 && index++ < MAX_CHUNKS);
-            } else {
-                readEntity(inputStream, outputStream, length);
-                readByte = ((ByteArrayOutputStream) outputStream).toByteArray();
+                    parseHeadLine(line, response);
+                } else
+                    break;
             }
-            byte[] bytes = getResponseBody(response);
-            response.setBytes(bytes);
-            String entity = getResponseBodyAsString(response);
-            response.setEntity(entity);
-            System.out.println(response.getRange());
-            System.out.println(Arrays.toString(bytes));
-            handleResponse(response);
+
+            response.setHeader(header);
+            int threshold = 10 * (1 << 20);
+            long length = response.getContentLength();
+            if (length < 0 && length != -1) {
+                throw new IOException("wrong length");
+            }
+            if (length == 0) {
+                System.out.println("The content length is zero!");
+            } else if (length > threshold) {
+                OutputStream outputStream = new ByteArrayOutputStream();
+                if (length == -1) {
+                    length = inputStream.available();
+                }
+                //broken header
+                if (length != readEntity(inputStream, outputStream, length)) {
+                    throw new IOException("wrong length");
+                }
+                String path = url.getPath();
+                String fileName = url.getHost() + "_" + path.substring(path.lastIndexOf("/") + 1) + ".temp";
+                int split = (int) (length / threshold) + 1;//(int) (length / MAX_LINE_LENGTH);
+                this.connect = false;
+                DownloadFile downloadFile = new DownloadFile(url.getUrl(), fileName, split, length);
+                down = new MultiThreadsDownload(downloadFile, response, this.url);
+                down.start();
+            } else {
+                OutputStream outputStream = new ByteArrayOutputStream();
+                long index;
+                if ("chunked".equals(response.getTransferCoding())) {
+                    index = length = 0;
+                    int hex;
+                    String strHex;
+                    do {
+                        strHex = readLine(inputStream).trim();
+                        hex = Integer.parseInt(strHex, 16);
+                        length += readEntity(inputStream, outputStream, hex);
+                        if (hex > 0) {
+                            readLine(inputStream); // there's a blank line before the content
+                        }
+                        else if (hex < 0) {
+                            throw new IOException();
+                        }
+                    } while (hex > 0 && index++ < MAX_CHUNKS);
+                    response.setContentLength(length);
+                } else {
+                    if (length == -1) {
+                        length = inputStream.available();
+                    }
+                    readEntity(inputStream, outputStream, length);
+                }
+
+                while (inputStream.available() > 0) {
+                    byte[] buffer = new byte[inputStream.available()];
+                    inputStream.read(buffer, 0, buffer.length);
+                    outputStream.write(buffer);
+                }
+                readByte = ((ByteArrayOutputStream) outputStream).toByteArray();
+                byte[] bytes = getResponseBody(response);
+                response.setBytes(bytes);
+                String entity = getResponseBodyAsString(response);
+                response.setEntity(entity);
+                handleResponse(response);
+            }
         }
+        else
+            throw new IOException("wrong status line");
     }
     //read the entity of http response
     private int readEntity(InputStream inputStream, OutputStream outputStream, long length) throws IOException {
-        long size = BUFFER_SIZE;
+        long size = length;
         byte[] buf = new byte[BUFFER_SIZE];
-
-        int index = 0;
+        long index = 0;
         int readLength;
-        while(index < length && (readLength = inputStream.read(buf, 0, (int) size)) > 0) {
+        while(index < length && (readLength = inputStream.read(buf, 0, (int) Math.min(size, BUFFER_SIZE))) > 0) {
             //write input stream data into buffer
             outputStream.write(buf, 0, readLength);
             //set size
             size = Math.min(BUFFER_SIZE, length - (index += readLength));
         }
-        return index;
+        return (int) index;
     }
     //parse head line and set properties of the response
     private void parseHeadLine(String headLine, Response response) throws IOException {
-        System.out.println(headLine);
+//        System.out.println(headLine);
         if (headLine != null) {
             String[] lines = headLine.split(": ");
             switch (lines[0]) {
@@ -201,6 +301,9 @@ public class HttpClient {
                     break;
                 case "Keep-Alive":
                     break;
+                case "Etag":
+                    response.setEtag(lines[1]);
+                    break;
                 case "":
                     break;
                 default:
@@ -230,17 +333,31 @@ public class HttpClient {
             if (response.getLocation() != null) {
                 String location = response.getLocation();
                 URLParser urlParser = new URLParser(location);
-                new HttpClient(urlParser.getUrl(), cookies, multiThread);
+                URL newUrl = urlParser.getUrl();
+                this.connect = false;
+                DNSQuery dnsQuery = new DNSQuery(newUrl.getHost(), "202.120.224.26");
+                newUrl.setIps(dnsQuery.getIpList());
+                //send redirect
+                HttpClient client = null;
+                try {
+                    client = new HttpClient(urlParser.getUrl(), cookies, multiThread);
+
+                } catch (NoSuchAlgorithmException ignored) {
+                } finally {
+                    if (urlParser.getUrl().getIps().size() > 0)
+                        urlParser.getUrl().getIps().forEach(System.err::println);
+                    if (client!= null && client.getResponse() != null)
+                        System.err.println(client.getResponse().getHeader());
+                }
             }
         }
     }
     private synchronized byte[] getResponseBody(Response response) throws IOException {
         String encoding = response.getContentEncoding();
         if(encoding == null) {
-            return null;
+            return readByte;
         }
-        InputStream in = new ByteArrayInputStream(readByte);;
-
+        InputStream in = new ByteArrayInputStream(readByte);
         //if the content is compressed by giz
         if("gzip".equals(encoding) && !multiThread) {
             in = new GZIPInputStream(in);
@@ -260,7 +377,7 @@ public class HttpClient {
     }
 
     private String getResponseBodyAsString(Response response) throws IOException {
-        return new String(getResponseBody(response));
+        return new String(response.getBytes(), "UTF-8");
     }
 
     public InputStream getResponseBodyAsStream(Response response) throws IOException {
@@ -293,7 +410,11 @@ public class HttpClient {
     }
     private String getRequestString(String addString) {
         String request = "";
-        request = request + "Host: " +  url.getHost() + "\r\n";
+        request = request + "Host: " +  url.getHost();
+        if (url.getPort() != 80) {
+            request = request + ":" + url.getPort();
+        }
+        request = request + "\r\n";
         request = request + "Connection: keep-alive\r\n";
         request = request + "Upgrade-Insecure-Requests: 1\r\n";
         request = request + Browser.getBrowserType(Browser.CHROME);
