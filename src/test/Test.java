@@ -21,9 +21,7 @@ public class Test {
             //testHttp();
             testTLS(new String[]{"mirrors.tuna.tsinghua.edu.cn", "443", "/"});
             //testGzip();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (NoSuchAlgorithmException e) {
+        } catch (IOException | NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
     }
@@ -54,11 +52,6 @@ public class Test {
         System.out.println(Arrays.toString(outputStream.toByteArray()));
     }
     private static void testTLS(String[] args) throws NoSuchAlgorithmException, IOException {
-        if (args.length < 3) {
-            System.out.println("usage: TLSSocket <host> <port> <file> [proxyHost] [proxyPort]");
-            System.exit(0);
-        }
-
         String host = args[0];
         int port = Integer.parseInt(args[1]);
         String file = args[2];
@@ -67,21 +60,20 @@ public class Test {
         if (args.length == 3) {
             tls = new TLSSocket(host, port);
         }
-
         String out = "GET /" + file  + " HTTP/1.1\r\n"
-                + "User-Agent: TLSSocket Test\r\n"
                 + "Host: " + host + ":" + port + "\r\n"
                 + "Connection: Keep-Alive\r\n"
                 + "\r\n";
-
-        tls.getTlsOutputStream().write(out.getBytes());
-        byte[] buf = new byte[4096];
-        while (true) {
-            int count = tls.getTlsInputStream().read(buf);
-            if (count < 0) {
-                break;
+        if (tls != null) {
+            tls.getTlsOutputStream().write(out.getBytes());
+            byte[] buf = new byte[4096];
+            while (true) {
+                int count = tls.getTlsInputStream().read(buf);
+                if (count < 0) {
+                    break;
+                }
+                System.out.print(new String(buf, 0, count));
             }
-            System.out.print(new String(buf, 0, count));
         }
     }
 }

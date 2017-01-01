@@ -40,7 +40,7 @@ public class CookieManager {
         }
 
     }
-
+    //save cookie into a file
     private synchronized static void saveCookie() throws IOException {
         File file = new File(cookiePath);
         if (!file.exists())

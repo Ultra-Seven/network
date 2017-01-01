@@ -44,6 +44,7 @@ public class TLSInputStream extends InputStream {
                 e.printStackTrace();
             }
         }
+        //there is nothing to read
         if (available == 0) {
             return -1;
         }

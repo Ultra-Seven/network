@@ -7,12 +7,9 @@ import URL.TLS.TLSSocket;
 import URL.URL;
 
 import java.io.*;
-import java.net.InetSocketAddress;
-import java.net.Socket;
-import java.net.SocketAddress;
+import java.net.*;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
-import java.util.Arrays;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipInputStream;
 
@@ -78,7 +75,6 @@ public class HttpClient {
         //query parameter
         if (url.getQuery() != null)
             path += ("?" + url.getQuery());
-//        path += url.getFragment();
         //request line
         request = request + "GET " + path + " HTTP/1.1\r\n";
         //header line
@@ -109,9 +105,9 @@ public class HttpClient {
                     }
                 }
                 String utf8 = new String(response.getBytes(), "UTF-8");
-                while (utf8.charAt(0) == '\n') {
-                    utf8 = utf8.substring(1);
-                }
+//                while (utf8.charAt(0) == '\n') {
+//                    utf8 = utf8.substring(1);
+//                }
                 System.out.print(utf8);
             }
         }
@@ -209,13 +205,13 @@ public class HttpClient {
                         strHex = readLine(inputStream).trim();
                         hex = Integer.parseInt(strHex, 16);
                         length += readEntity(inputStream, outputStream, hex);
-                        if (hex > 0) {
-                            readLine(inputStream); // there's a blank line before the content
+                        if (hex >= 0) {
+                            readLine(inputStream);
                         }
                         else if (hex < 0) {
                             throw new IOException();
                         }
-                    } while (hex > 0 && index++ < MAX_CHUNKS);
+                    } while (hex >= 0 && index++ < MAX_CHUNKS);
                     response.setContentLength(length);
                 } else {
                     if (length == -1) {
@@ -223,7 +219,6 @@ public class HttpClient {
                     }
                     readEntity(inputStream, outputStream, length);
                 }
-
                 while (inputStream.available() > 0) {
                     byte[] buffer = new byte[inputStream.available()];
                     inputStream.read(buffer, 0, buffer.length);

@@ -65,15 +65,13 @@ public class TLSSocket extends Socket {
     public void setConnected(boolean b) {
         connected = b;
     }
-
+    //read all available message from record
     protected void readAvailable() throws IOException, ShortBufferException {
         while (record.getReadBufOffset() > 0) {
-            byte[] fragment = record.readFromRecord();
-            if (fragment != null) {
-                tlsInputStream.addBytes(fragment);
-            }
+            readFragment();
         }
     }
+    //read fragment bytes  from record
     protected void readFragment() throws IOException, ShortBufferException {
         byte[] fragment = record.readFromRecord();
         if (fragment != null) {

@@ -17,9 +17,9 @@ import java.util.Arrays;
  * Created by Administrator on 2016/12/9.
  */
 public class Record {
-    public static final int MAX_RECORD_SIZE = 18442;
+    private static final int MAX_RECORD_SIZE = 18442;
     //CONTENTTYPE_CHANGE_CIPHER_SPEC, CONTENTTYPE_ALERT, CONTENTTYPE_HANDSHAKE, CONTENTTYPE_APPLICATION_DATA
-    public static final byte[] CONTENT_TYPE = {20, 21, 22, 23};
+    static final byte[] CONTENT_TYPE = {20, 21, 22, 23};
     private static final byte ALERT_CLOSE_NOTIFY = 0;
     private TLSSocket tlsSocket;
     private Cipher encrypt;
@@ -52,7 +52,7 @@ public class Record {
     public void sendMessage(byte[] message, byte contentType) throws IOException {
         int messageLength = message.length;
         int offset = 0;
-        byte[] range = null;
+        byte[] range = new byte[1];
         while (messageLength > 0) {
             int sendingLength = messageLength > 491 ? 491 : messageLength;
             //encrypt the message
@@ -149,6 +149,7 @@ public class Record {
         readBufOffset = delta;
         return fragment;
     }
+    //encrypt the message given by client
     private byte[] encryptMessage(byte contentType, byte[] message, int offset, int length) throws ShortBufferException {
         byte[] sequence = longToByte(clientNum++);
         byte[] mac = getMAC(clientMAC, sequence, contentType, message, offset, length);
@@ -164,7 +165,7 @@ public class Record {
         encrypt.update(messageMaced, 0, macLength, messageMaced);
         return messageMaced;
     }
-
+    //get message authentic code
     private byte[] getMAC(HMAC hMacMD, byte[] sequenceNumber, byte type, byte[] message, int offset, int length) {
         //sequenceNumber(8) + contentType(1) + protocolVersion(2) + messageVector(2 + messageLength)
         byte[] plainTxt = new byte[13 + length];
